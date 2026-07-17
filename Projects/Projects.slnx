@@ -1,0 +1,9 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="HelloApplication/HelloApplication.vcxproj" Id="34308bb7-12c2-4bce-9868-9327976f25b9" />
+  <Project Path="HelloGLFW/HelloGLFW.vcxproj" Id="4acbb7ec-e85c-4504-8299-b1ae251236cd" />
+  <Project Path="HelloWorld/HelloWorld.vcxproj" Id="f4d4e490-38a7-4b4c-aa3a-900076095e86" />
+</Solution>

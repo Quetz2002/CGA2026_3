@@ -1,0 +1,4 @@
+C:/Users/Alumno/Documents/CGA2026_3/Libs/glfw/CMakeFiles/ALL_BUILD.dir
+C:/Users/Alumno/Documents/CGA2026_3/Libs/glfw/CMakeFiles/ZERO_CHECK.dir
+C:/Users/Alumno/Documents/CGA2026_3/Libs/glfw/src/CMakeFiles/glfw.dir
+C:/Users/Alumno/Documents/CGA2026_3/Libs/glfw/src/CMakeFiles/update_mappings.dir

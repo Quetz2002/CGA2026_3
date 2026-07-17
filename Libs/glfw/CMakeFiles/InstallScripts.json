@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/Alumno/Documents/CGA2026_3/Libs/glfw/cmake_install.cmake",
+		"C:/Users/Alumno/Documents/CGA2026_3/Libs/glfw/src/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

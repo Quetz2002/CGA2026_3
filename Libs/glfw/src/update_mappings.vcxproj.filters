@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Alumno\Documents\CGA2026_3\Libs\glfw\CMakeFiles\ac4d575d7880d2fef0cd66ed192184ab\update_mappings.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Alumno\Documents\CGA2026_3\Libs\glfw\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\Alumno\Documents\CGA2026_3\Libs\glfw\src\mappings.h.in">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Users\Alumno\Documents\CGA2026_3\Libs\glfw\CMake\GenerateMappings.cmake" />
+    <None Include="C:\Users\Alumno\Documents\CGA2026_3\Libs\glfw\src\CMakeFiles\update_mappings" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{BDC50602-7EA2-3BBA-B0D3-74C2B09C5DE5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{AA7B282A-C5EA-3152-A458-F829FB4B4AF6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
