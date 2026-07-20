@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Gio\Documents\GitHub\Original\CGA2026_3\Libs\glfw\CMakeFiles\260d46f077fb28977448e632ce5f44be\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{E93438F1-B40D-3F43-A033-3F14283371CE}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

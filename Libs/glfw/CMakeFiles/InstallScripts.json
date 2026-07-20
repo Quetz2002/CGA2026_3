@@ -1,8 +1,11 @@
 {
 	"InstallScripts" : 
 	[
-		"C:/Users/Alumno/Documents/CGA2026_3/Libs/glfw/cmake_install.cmake",
-		"C:/Users/Alumno/Documents/CGA2026_3/Libs/glfw/src/cmake_install.cmake"
+		"C:/Users/Gio/Documents/GitHub/Original/CGA2026_3/Libs/glfw/cmake_install.cmake",
+		"C:/Users/Gio/Documents/GitHub/Original/CGA2026_3/Libs/glfw/src/cmake_install.cmake",
+		"C:/Users/Gio/Documents/GitHub/Original/CGA2026_3/Libs/glfw/examples/cmake_install.cmake",
+		"C:/Users/Gio/Documents/GitHub/Original/CGA2026_3/Libs/glfw/tests/cmake_install.cmake",
+		"C:/Users/Gio/Documents/GitHub/Original/CGA2026_3/Libs/glfw/docs/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

@@ -4,18 +4,18 @@ events:
   -
     kind: "message-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineSystem.cmake:218 (message)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CMakeDetermineSystem.cmake:212 (message)"
       - "CMakeLists.txt:3 (project)"
     message: |
       The system is: Windows - 10.0.26200 - AMD64
   -
     kind: "find-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:468 (find_file)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:506 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
       - "CMakeLists.txt:3 (project)"
     mode: "file"
     variable: "src_in"
@@ -31,29 +31,34 @@ events:
     names:
       - "CMakeCCompilerId.c.in"
     candidate_directories:
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/"
-    found: "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCCompilerId.c.in"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/"
+    found: "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CMakeCCompilerId.c.in"
     search_context:
       ENV{PATH}:
-        - "C:\\windows\\system32"
-        - "C:\\windows"
-        - "C:\\windows\\System32\\Wbem"
-        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:/Users/Gio/.gemini/antigravity-ide/bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
         - "C:\\Program Files\\dotnet\\"
-        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
-        - "C:\\Program Files (x86)\\QuickTime\\QTSystem\\"
-        - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Users\\Alumno\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\Alumno\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Program Files\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:\\Users\\Gio\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Gio\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\Users\\Gio\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\Gio\\.dotnet\\tools"
   -
     kind: "message-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
       - "CMakeLists.txt:3 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
@@ -63,46 +68,37 @@ events:
       
       The output was:
       0
-      MSBuild version 18.7.8+1ac568fee for .NET Framework
-      Build started 7/16/2026 5:57:36 PM.
+      Versi├│n de MSBuild 18.8.2+ce25c0108 para .NET Framework
+      Compilaci├│n iniciada a las 20/07/2026 03:23:27 p. m..
       
-      Project "C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\4.4.0\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
+      Proyecto "C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\4.3.1-msvc1\\CompilerIdC\\CompilerIdC.vcxproj" en nodo 1 (destinos predeterminados).
       PrepareForBuild:
-        Creating directory "Debug\\".
-        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-        Creating directory "Debug\\CompilerIdC.tlog\\".
+        Creando directorio "Debug\\".
+        La salida estructurada est├í habilitada. El formato del diagn├│stico del compilador reflejar├í la jerarqu├¡a de errores. Consulte https://aka.ms/cpp/structured-output para obtener m├ís detalles.
+        Creando directorio "Debug\\CompilerIdC.tlog\\".
       InitializeBuildStatus:
-        Creating "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-        Touching "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
-      VcpkgTripletSelection:
-        Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
-        Using normalized configuration "Release"
+        Se crear├í "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" porque se especific├│ "AlwaysCreate".
+        Aplicando tarea Touch a "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
       ClCompile:
-        C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc145.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc145.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
         CMakeCCompilerId.c
       Link:
-        C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
-        CompilerIdC.vcxproj -> C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\4.4.0\\CompilerIdC\\CompilerIdC.exe
-      AppLocalFromInstalled:
-        pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\4.4.0\\CompilerIdC\\CompilerIdC.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdC.tlog\\CompilerIdC.write.1u.tlog" "Debug\\vcpkg.applocal.log"
-        'pwsh.exe' is not recognized as an internal or external command,
-        operable program or batch file.
-        The command "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\4.4.0\\CompilerIdC\\CompilerIdC.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdC.tlog\\CompilerIdC.write.1u.tlog" "Debug\\vcpkg.applocal.log"" exited with code 9009.
-        "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\4.4.0\\CompilerIdC\\CompilerIdC.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdC.tlog\\CompilerIdC.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+        C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\4.3.1-msvc1\\CompilerIdC\\CompilerIdC.exe
       PostBuildEvent:
         for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
         :VCEnd
         CMAKE_C_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe
       FinalizeBuildStatus:
-        Deleting file "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
-        Touching "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
-      Done Building Project "C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\4.4.0\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
+        Se eliminar├í el archivo "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+        Aplicando tarea Touch a "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
+      Compilaci├│n del proyecto terminada "C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\4.3.1-msvc1\\CompilerIdC\\CompilerIdC.vcxproj" (destinos predeterminados).
       
-      Build succeeded.
-          0 Warning(s)
-          0 Error(s)
+      Compilaci├│n correcta.
+          0 Advertencia(s)
+          0 Errores
       
-      Time Elapsed 00:00:01.58
+      Tiempo transcurrido 00:00:02.28
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -110,15 +106,15 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
       
       The C compiler identification is MSVC, found in:
-        C:/Users/Alumno/Documents/CGA2026_3/Libs/glfw/CMakeFiles/4.4.0/CompilerIdC/CompilerIdC.exe
+        C:/Users/Gio/Documents/GitHub/Original/CGA2026_3/Libs/glfw/CMakeFiles/4.3.1-msvc1/CompilerIdC/CompilerIdC.exe
       
   -
     kind: "find-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:64 (__resolve_tool_path)"
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:102 (__resolve_linker_path)"
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:103 (__resolve_linker_path)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
       - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "_CMAKE_TOOL_WITH_PATH"
@@ -135,44 +131,54 @@ events:
       - "link"
     candidate_directories:
       - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
+      - "C:/Users/Gio/.gemini/antigravity-ide/bin/"
       - "C:/Windows/System32/"
       - "C:/Windows/"
       - "C:/Windows/System32/wbem/"
       - "C:/Windows/System32/WindowsPowerShell/v1.0/"
       - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
       - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
       - "C:/Program Files/dotnet/"
-      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
-      - "C:/Program Files (x86)/QuickTime/QTSystem/"
-      - "C:/Program Files/CMake/bin/"
-      - "C:/Users/Alumno/AppData/Local/Microsoft/WindowsApps/"
-      - "C:/Users/Alumno/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Users/Gio/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Gio/AppData/Local/Programs/Antigravity IDE/bin/"
+      - "C:/Users/Gio/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/Gio/.dotnet/tools/"
     searched_directories:
       - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.com"
     found: "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.exe"
     search_context:
       ENV{PATH}:
-        - "C:\\windows\\system32"
-        - "C:\\windows"
-        - "C:\\windows\\System32\\Wbem"
-        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:/Users/Gio/.gemini/antigravity-ide/bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
         - "C:\\Program Files\\dotnet\\"
-        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
-        - "C:\\Program Files (x86)\\QuickTime\\QTSystem\\"
-        - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Users\\Alumno\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\Alumno\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Program Files\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:\\Users\\Gio\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Gio\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\Users\\Gio\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\Gio\\.dotnet\\tools"
   -
     kind: "find-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:64 (__resolve_tool_path)"
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:103 (__resolve_linker_path)"
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:104 (__resolve_linker_path)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
       - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "_CMAKE_TOOL_WITH_PATH"
@@ -189,23 +195,31 @@ events:
       - "lld-link"
     candidate_directories:
       - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
+      - "C:/Users/Gio/.gemini/antigravity-ide/bin/"
       - "C:/Windows/System32/"
       - "C:/Windows/"
       - "C:/Windows/System32/wbem/"
       - "C:/Windows/System32/WindowsPowerShell/v1.0/"
       - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
       - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
       - "C:/Program Files/dotnet/"
-      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
-      - "C:/Program Files (x86)/QuickTime/QTSystem/"
-      - "C:/Program Files/CMake/bin/"
-      - "C:/Users/Alumno/AppData/Local/Microsoft/WindowsApps/"
-      - "C:/Users/Alumno/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Users/Gio/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Gio/AppData/Local/Programs/Antigravity IDE/bin/"
+      - "C:/Users/Gio/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/Gio/.dotnet/tools/"
     searched_directories:
       - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link.com"
       - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link.exe"
       - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link"
+      - "C:/Users/Gio/.gemini/antigravity-ide/bin/lld-link.com"
+      - "C:/Users/Gio/.gemini/antigravity-ide/bin/lld-link.exe"
+      - "C:/Users/Gio/.gemini/antigravity-ide/bin/lld-link"
       - "C:/Windows/System32/lld-link.com"
       - "C:/Windows/System32/lld-link.exe"
       - "C:/Windows/System32/lld-link"
@@ -221,51 +235,68 @@ events:
       - "C:/Windows/System32/OpenSSH/lld-link.com"
       - "C:/Windows/System32/OpenSSH/lld-link.exe"
       - "C:/Windows/System32/OpenSSH/lld-link"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/lld-link.com"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/lld-link.exe"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/lld-link"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/lld-link.com"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/lld-link.exe"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/lld-link"
+      - "C:/Program Files/Git/cmd/lld-link.com"
+      - "C:/Program Files/Git/cmd/lld-link.exe"
+      - "C:/Program Files/Git/cmd/lld-link"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link"
       - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link.com"
       - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link.exe"
       - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link"
       - "C:/Program Files/dotnet/lld-link.com"
       - "C:/Program Files/dotnet/lld-link.exe"
       - "C:/Program Files/dotnet/lld-link"
-      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link.com"
-      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link.exe"
-      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link"
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.com"
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.exe"
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link"
-      - "C:/Program Files (x86)/QuickTime/QTSystem/lld-link.com"
-      - "C:/Program Files (x86)/QuickTime/QTSystem/lld-link.exe"
-      - "C:/Program Files (x86)/QuickTime/QTSystem/lld-link"
-      - "C:/Program Files/CMake/bin/lld-link.com"
-      - "C:/Program Files/CMake/bin/lld-link.exe"
-      - "C:/Program Files/CMake/bin/lld-link"
-      - "C:/Users/Alumno/AppData/Local/Microsoft/WindowsApps/lld-link.com"
-      - "C:/Users/Alumno/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
-      - "C:/Users/Alumno/AppData/Local/Microsoft/WindowsApps/lld-link"
-      - "C:/Users/Alumno/AppData/Local/GitHubDesktop/bin/lld-link.com"
-      - "C:/Users/Alumno/AppData/Local/GitHubDesktop/bin/lld-link.exe"
-      - "C:/Users/Alumno/AppData/Local/GitHubDesktop/bin/lld-link"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/lld-link.com"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/lld-link.exe"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/lld-link"
+      - "C:/Users/Gio/AppData/Local/Microsoft/WindowsApps/lld-link.com"
+      - "C:/Users/Gio/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
+      - "C:/Users/Gio/AppData/Local/Microsoft/WindowsApps/lld-link"
+      - "C:/Users/Gio/AppData/Local/Programs/Antigravity IDE/bin/lld-link.com"
+      - "C:/Users/Gio/AppData/Local/Programs/Antigravity IDE/bin/lld-link.exe"
+      - "C:/Users/Gio/AppData/Local/Programs/Antigravity IDE/bin/lld-link"
+      - "C:/Users/Gio/AppData/Local/GitHubDesktop/bin/lld-link.com"
+      - "C:/Users/Gio/AppData/Local/GitHubDesktop/bin/lld-link.exe"
+      - "C:/Users/Gio/AppData/Local/GitHubDesktop/bin/lld-link"
+      - "C:/Users/Gio/.dotnet/tools/lld-link.com"
+      - "C:/Users/Gio/.dotnet/tools/lld-link.exe"
+      - "C:/Users/Gio/.dotnet/tools/lld-link"
     found: false
     search_context:
       ENV{PATH}:
-        - "C:\\windows\\system32"
-        - "C:\\windows"
-        - "C:\\windows\\System32\\Wbem"
-        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:/Users/Gio/.gemini/antigravity-ide/bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
         - "C:\\Program Files\\dotnet\\"
-        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
-        - "C:\\Program Files (x86)\\QuickTime\\QTSystem\\"
-        - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Users\\Alumno\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\Alumno\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Program Files\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:\\Users\\Gio\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Gio\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\Users\\Gio\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\Gio\\.dotnet\\tools"
   -
     kind: "find-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
       - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_LINKER"
@@ -282,42 +313,52 @@ events:
       - "link"
     candidate_directories:
       - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
+      - "C:/Users/Gio/.gemini/antigravity-ide/bin/"
       - "C:/Windows/System32/"
       - "C:/Windows/"
       - "C:/Windows/System32/wbem/"
       - "C:/Windows/System32/WindowsPowerShell/v1.0/"
       - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
       - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
       - "C:/Program Files/dotnet/"
-      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
-      - "C:/Program Files (x86)/QuickTime/QTSystem/"
-      - "C:/Program Files/CMake/bin/"
-      - "C:/Users/Alumno/AppData/Local/Microsoft/WindowsApps/"
-      - "C:/Users/Alumno/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Users/Gio/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Gio/AppData/Local/Programs/Antigravity IDE/bin/"
+      - "C:/Users/Gio/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/Gio/.dotnet/tools/"
     searched_directories:
       - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.com"
     found: "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.exe"
     search_context:
       ENV{PATH}:
-        - "C:\\windows\\system32"
-        - "C:\\windows"
-        - "C:\\windows\\System32\\Wbem"
-        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:/Users/Gio/.gemini/antigravity-ide/bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
         - "C:\\Program Files\\dotnet\\"
-        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
-        - "C:\\Program Files (x86)\\QuickTime\\QTSystem\\"
-        - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Users\\Alumno\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\Alumno\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Program Files\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:\\Users\\Gio\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Gio\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\Users\\Gio\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\Gio\\.dotnet\\tools"
   -
     kind: "find-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
       - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_MT"
@@ -334,23 +375,31 @@ events:
       - "mt"
     candidate_directories:
       - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
+      - "C:/Users/Gio/.gemini/antigravity-ide/bin/"
       - "C:/Windows/System32/"
       - "C:/Windows/"
       - "C:/Windows/System32/wbem/"
       - "C:/Windows/System32/WindowsPowerShell/v1.0/"
       - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
       - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
       - "C:/Program Files/dotnet/"
-      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
-      - "C:/Program Files (x86)/QuickTime/QTSystem/"
-      - "C:/Program Files/CMake/bin/"
-      - "C:/Users/Alumno/AppData/Local/Microsoft/WindowsApps/"
-      - "C:/Users/Alumno/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Users/Gio/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Gio/AppData/Local/Programs/Antigravity IDE/bin/"
+      - "C:/Users/Gio/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/Gio/.dotnet/tools/"
     searched_directories:
       - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/mt.com"
       - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/mt.exe"
       - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/mt"
+      - "C:/Users/Gio/.gemini/antigravity-ide/bin/mt.com"
+      - "C:/Users/Gio/.gemini/antigravity-ide/bin/mt.exe"
+      - "C:/Users/Gio/.gemini/antigravity-ide/bin/mt"
       - "C:/Windows/System32/mt.com"
       - "C:/Windows/System32/mt.exe"
       - "C:/Windows/System32/mt"
@@ -366,51 +415,68 @@ events:
       - "C:/Windows/System32/OpenSSH/mt.com"
       - "C:/Windows/System32/OpenSSH/mt.exe"
       - "C:/Windows/System32/OpenSSH/mt"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/mt.com"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/mt.exe"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/mt"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/mt.com"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/mt.exe"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/mt"
+      - "C:/Program Files/Git/cmd/mt.com"
+      - "C:/Program Files/Git/cmd/mt.exe"
+      - "C:/Program Files/Git/cmd/mt"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/mt.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/mt.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/mt"
       - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/mt.com"
       - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/mt.exe"
       - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/mt"
       - "C:/Program Files/dotnet/mt.com"
       - "C:/Program Files/dotnet/mt.exe"
       - "C:/Program Files/dotnet/mt"
-      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/mt.com"
-      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/mt.exe"
-      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/mt"
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/mt.com"
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/mt.exe"
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/mt"
-      - "C:/Program Files (x86)/QuickTime/QTSystem/mt.com"
-      - "C:/Program Files (x86)/QuickTime/QTSystem/mt.exe"
-      - "C:/Program Files (x86)/QuickTime/QTSystem/mt"
-      - "C:/Program Files/CMake/bin/mt.com"
-      - "C:/Program Files/CMake/bin/mt.exe"
-      - "C:/Program Files/CMake/bin/mt"
-      - "C:/Users/Alumno/AppData/Local/Microsoft/WindowsApps/mt.com"
-      - "C:/Users/Alumno/AppData/Local/Microsoft/WindowsApps/mt.exe"
-      - "C:/Users/Alumno/AppData/Local/Microsoft/WindowsApps/mt"
-      - "C:/Users/Alumno/AppData/Local/GitHubDesktop/bin/mt.com"
-      - "C:/Users/Alumno/AppData/Local/GitHubDesktop/bin/mt.exe"
-      - "C:/Users/Alumno/AppData/Local/GitHubDesktop/bin/mt"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/mt.com"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/mt.exe"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/mt"
+      - "C:/Users/Gio/AppData/Local/Microsoft/WindowsApps/mt.com"
+      - "C:/Users/Gio/AppData/Local/Microsoft/WindowsApps/mt.exe"
+      - "C:/Users/Gio/AppData/Local/Microsoft/WindowsApps/mt"
+      - "C:/Users/Gio/AppData/Local/Programs/Antigravity IDE/bin/mt.com"
+      - "C:/Users/Gio/AppData/Local/Programs/Antigravity IDE/bin/mt.exe"
+      - "C:/Users/Gio/AppData/Local/Programs/Antigravity IDE/bin/mt"
+      - "C:/Users/Gio/AppData/Local/GitHubDesktop/bin/mt.com"
+      - "C:/Users/Gio/AppData/Local/GitHubDesktop/bin/mt.exe"
+      - "C:/Users/Gio/AppData/Local/GitHubDesktop/bin/mt"
+      - "C:/Users/Gio/.dotnet/tools/mt.com"
+      - "C:/Users/Gio/.dotnet/tools/mt.exe"
+      - "C:/Users/Gio/.dotnet/tools/mt"
     found: false
     search_context:
       ENV{PATH}:
-        - "C:\\windows\\system32"
-        - "C:\\windows"
-        - "C:\\windows\\System32\\Wbem"
-        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:/Users/Gio/.gemini/antigravity-ide/bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
         - "C:\\Program Files\\dotnet\\"
-        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
-        - "C:\\Program Files (x86)\\QuickTime\\QTSystem\\"
-        - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Users\\Alumno\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\Alumno\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Program Files\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:\\Users\\Gio\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Gio\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\Users\\Gio\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\Gio\\.dotnet\\tools"
   -
     kind: "find-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
       - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_AR"
@@ -427,45 +493,55 @@ events:
       - "lib"
     candidate_directories:
       - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
+      - "C:/Users/Gio/.gemini/antigravity-ide/bin/"
       - "C:/Windows/System32/"
       - "C:/Windows/"
       - "C:/Windows/System32/wbem/"
       - "C:/Windows/System32/WindowsPowerShell/v1.0/"
       - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
       - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
       - "C:/Program Files/dotnet/"
-      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
-      - "C:/Program Files (x86)/QuickTime/QTSystem/"
-      - "C:/Program Files/CMake/bin/"
-      - "C:/Users/Alumno/AppData/Local/Microsoft/WindowsApps/"
-      - "C:/Users/Alumno/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Users/Gio/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Gio/AppData/Local/Programs/Antigravity IDE/bin/"
+      - "C:/Users/Gio/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/Gio/.dotnet/tools/"
     searched_directories:
       - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lib.com"
     found: "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lib.exe"
     search_context:
       ENV{PATH}:
-        - "C:\\windows\\system32"
-        - "C:\\windows"
-        - "C:\\windows\\System32\\Wbem"
-        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:/Users/Gio/.gemini/antigravity-ide/bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
         - "C:\\Program Files\\dotnet\\"
-        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
-        - "C:\\Program Files (x86)\\QuickTime\\QTSystem\\"
-        - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Users\\Alumno\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\Alumno\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Program Files\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:\\Users\\Gio\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Gio\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\Users\\Gio\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\Gio\\.dotnet\\tools"
   -
     kind: "find-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineRCCompiler.cmake:40 (find_program)"
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/Platform/Windows-MSVC.cmake:592 (enable_language)"
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/Platform/Windows-MSVC.cmake:565 (__windows_compiler_msvc_enable_rc)"
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/Platform/Windows-MSVC-C.cmake:5 (__windows_compiler_msvc)"
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCInformation.cmake:48 (include)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CMakeDetermineRCCompiler.cmake:40 (find_program)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/Platform/Windows-MSVC.cmake:596 (enable_language)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/Platform/Windows-MSVC.cmake:569 (__windows_compiler_msvc_enable_rc)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/Platform/Windows-MSVC-C.cmake:5 (__windows_compiler_msvc)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CMakeCInformation.cmake:48 (include)"
       - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_RC_COMPILER"
@@ -481,32 +557,40 @@ events:
     names:
       - "rc"
     candidate_directories:
+      - "C:/Users/Gio/.gemini/antigravity-ide/bin/"
       - "C:/Windows/System32/"
       - "C:/Windows/"
       - "C:/Windows/System32/wbem/"
       - "C:/Windows/System32/WindowsPowerShell/v1.0/"
       - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
       - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
       - "C:/Program Files/dotnet/"
-      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
-      - "C:/Program Files (x86)/QuickTime/QTSystem/"
-      - "C:/Program Files/CMake/bin/"
-      - "C:/Users/Alumno/AppData/Local/Microsoft/WindowsApps/"
-      - "C:/Users/Alumno/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Users/Gio/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Gio/AppData/Local/Programs/Antigravity IDE/bin/"
+      - "C:/Users/Gio/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/Gio/.dotnet/tools/"
       - "C:/Program Files/bin/"
       - "C:/Program Files/sbin/"
       - "C:/Program Files/"
       - "C:/Program Files (x86)/bin/"
       - "C:/Program Files (x86)/sbin/"
       - "C:/Program Files (x86)/"
-      - "C:/Program Files/CMake/bin/"
-      - "C:/Program Files/CMake/sbin/"
-      - "C:/Program Files/CMake/"
-      - "C:/Program Files/GLFW/bin/"
-      - "C:/Program Files/GLFW/sbin/"
-      - "C:/Program Files/GLFW/"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/sbin/"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/"
+      - "C:/Program Files (x86)/GLFW/bin/"
+      - "C:/Program Files (x86)/GLFW/sbin/"
+      - "C:/Program Files (x86)/GLFW/"
     searched_directories:
+      - "C:/Users/Gio/.gemini/antigravity-ide/bin/rc.com"
+      - "C:/Users/Gio/.gemini/antigravity-ide/bin/rc.exe"
+      - "C:/Users/Gio/.gemini/antigravity-ide/bin/rc"
       - "C:/Windows/System32/rc.com"
       - "C:/Windows/System32/rc.exe"
       - "C:/Windows/System32/rc"
@@ -522,30 +606,42 @@ events:
       - "C:/Windows/System32/OpenSSH/rc.com"
       - "C:/Windows/System32/OpenSSH/rc.exe"
       - "C:/Windows/System32/OpenSSH/rc"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/rc.com"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/rc.exe"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/rc"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/rc.com"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/rc.exe"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/rc"
+      - "C:/Program Files/Git/cmd/rc.com"
+      - "C:/Program Files/Git/cmd/rc.exe"
+      - "C:/Program Files/Git/cmd/rc"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/rc.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/rc.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/rc"
       - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/rc.com"
       - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/rc.exe"
       - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/rc"
       - "C:/Program Files/dotnet/rc.com"
       - "C:/Program Files/dotnet/rc.exe"
       - "C:/Program Files/dotnet/rc"
-      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/rc.com"
-      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/rc.exe"
-      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/rc"
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/rc.com"
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/rc.exe"
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/rc"
-      - "C:/Program Files (x86)/QuickTime/QTSystem/rc.com"
-      - "C:/Program Files (x86)/QuickTime/QTSystem/rc.exe"
-      - "C:/Program Files (x86)/QuickTime/QTSystem/rc"
-      - "C:/Program Files/CMake/bin/rc.com"
-      - "C:/Program Files/CMake/bin/rc.exe"
-      - "C:/Program Files/CMake/bin/rc"
-      - "C:/Users/Alumno/AppData/Local/Microsoft/WindowsApps/rc.com"
-      - "C:/Users/Alumno/AppData/Local/Microsoft/WindowsApps/rc.exe"
-      - "C:/Users/Alumno/AppData/Local/Microsoft/WindowsApps/rc"
-      - "C:/Users/Alumno/AppData/Local/GitHubDesktop/bin/rc.com"
-      - "C:/Users/Alumno/AppData/Local/GitHubDesktop/bin/rc.exe"
-      - "C:/Users/Alumno/AppData/Local/GitHubDesktop/bin/rc"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/rc.com"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/rc.exe"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/rc"
+      - "C:/Users/Gio/AppData/Local/Microsoft/WindowsApps/rc.com"
+      - "C:/Users/Gio/AppData/Local/Microsoft/WindowsApps/rc.exe"
+      - "C:/Users/Gio/AppData/Local/Microsoft/WindowsApps/rc"
+      - "C:/Users/Gio/AppData/Local/Programs/Antigravity IDE/bin/rc.com"
+      - "C:/Users/Gio/AppData/Local/Programs/Antigravity IDE/bin/rc.exe"
+      - "C:/Users/Gio/AppData/Local/Programs/Antigravity IDE/bin/rc"
+      - "C:/Users/Gio/AppData/Local/GitHubDesktop/bin/rc.com"
+      - "C:/Users/Gio/AppData/Local/GitHubDesktop/bin/rc.exe"
+      - "C:/Users/Gio/AppData/Local/GitHubDesktop/bin/rc"
+      - "C:/Users/Gio/.dotnet/tools/rc.com"
+      - "C:/Users/Gio/.dotnet/tools/rc.exe"
+      - "C:/Users/Gio/.dotnet/tools/rc"
       - "C:/Program Files/bin/rc.com"
       - "C:/Program Files/bin/rc.exe"
       - "C:/Program Files/bin/rc"
@@ -564,121 +660,116 @@ events:
       - "C:/Program Files (x86)/rc.com"
       - "C:/Program Files (x86)/rc.exe"
       - "C:/Program Files (x86)/rc"
-      - "C:/Program Files/CMake/bin/rc.com"
-      - "C:/Program Files/CMake/bin/rc.exe"
-      - "C:/Program Files/CMake/bin/rc"
-      - "C:/Program Files/CMake/sbin/rc.com"
-      - "C:/Program Files/CMake/sbin/rc.exe"
-      - "C:/Program Files/CMake/sbin/rc"
-      - "C:/Program Files/CMake/rc.com"
-      - "C:/Program Files/CMake/rc.exe"
-      - "C:/Program Files/CMake/rc"
-      - "C:/Program Files/GLFW/bin/rc.com"
-      - "C:/Program Files/GLFW/bin/rc.exe"
-      - "C:/Program Files/GLFW/bin/rc"
-      - "C:/Program Files/GLFW/sbin/rc.com"
-      - "C:/Program Files/GLFW/sbin/rc.exe"
-      - "C:/Program Files/GLFW/sbin/rc"
-      - "C:/Program Files/GLFW/rc.com"
-      - "C:/Program Files/GLFW/rc.exe"
-      - "C:/Program Files/GLFW/rc"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/rc.com"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/rc.exe"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/rc"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/sbin/rc.com"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/sbin/rc.exe"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/sbin/rc"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/rc.com"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/rc.exe"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/rc"
+      - "C:/Program Files (x86)/GLFW/bin/rc.com"
+      - "C:/Program Files (x86)/GLFW/bin/rc.exe"
+      - "C:/Program Files (x86)/GLFW/bin/rc"
+      - "C:/Program Files (x86)/GLFW/sbin/rc.com"
+      - "C:/Program Files (x86)/GLFW/sbin/rc.exe"
+      - "C:/Program Files (x86)/GLFW/sbin/rc"
+      - "C:/Program Files (x86)/GLFW/rc.com"
+      - "C:/Program Files (x86)/GLFW/rc.exe"
+      - "C:/Program Files (x86)/GLFW/rc"
     found: false
     search_context:
       ENV{PATH}:
-        - "C:\\windows\\system32"
-        - "C:\\windows"
-        - "C:\\windows\\System32\\Wbem"
-        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:/Users/Gio/.gemini/antigravity-ide/bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
         - "C:\\Program Files\\dotnet\\"
-        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
-        - "C:\\Program Files (x86)\\QuickTime\\QTSystem\\"
-        - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Users\\Alumno\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\Alumno\\AppData\\Local\\GitHubDesktop\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Program Files/GLFW"
+        - "C:\\Program Files\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:\\Users\\Gio\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Gio\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\Users\\Gio\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\Gio\\.dotnet\\tools"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/GLFW"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
         - "C:/Program Files (x86)"
-        - "C:/Program Files/CMake"
-        - "C:/Program Files/GLFW"
+        - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake"
+        - "C:/Program Files (x86)/GLFW"
   -
     kind: "try_compile-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake:123 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:3 (project)"
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/Alumno/Documents/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-ia3q31"
-      binary: "C:/Users/Alumno/Documents/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-ia3q31"
+      source: "C:/Users/Gio/Documents/GitHub/Original/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-mcd33i"
+      binary: "C:/Users/Gio/Documents/GitHub/Original/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-mcd33i"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
     buildResult:
       variable: "CMAKE_C_ABI_COMPILED"
-      cached: false
+      cached: true
       stdout: |
-        Change Dir: 'C:/Users/Alumno/Documents/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-ia3q31'
+        Change Dir: 'C:/Users/Gio/Documents/GitHub/Original/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-mcd33i'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_d0cae.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
-        MSBuild version 18.7.8+1ac568fee for .NET Framework
-        Build started 7/16/2026 5:57:38 PM.
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_416fe.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        Versi├│n de MSBuild 18.8.2+ce25c0108 para .NET Framework
+        Compilaci├│n iniciada a las 20/07/2026 03:23:31 p. m..
         
-        Project "C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-ia3q31\\cmTC_d0cae.vcxproj" on node 1 (default targets).
+        Proyecto "C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-mcd33i\\cmTC_416fe.vcxproj" en nodo 1 (destinos predeterminados).
         PrepareForBuild:
-          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-ia3q31\\Debug\\".
-          Creating directory "cmTC_d0cae.dir\\Debug\\cmTC_d0cae.tlog\\".
+          La salida estructurada est├í habilitada. El formato del diagn├│stico del compilador reflejar├í la jerarqu├¡a de errores. Consulte https://aka.ms/cpp/structured-output para obtener m├ís detalles.
+          Creando directorio "C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-mcd33i\\Debug\\".
+          Creando directorio "cmTC_416fe.dir\\Debug\\cmTC_416fe.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_d0cae.dir\\Debug\\cmTC_d0cae.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_d0cae.dir\\Debug\\cmTC_d0cae.tlog\\unsuccessfulbuild".
-        VcpkgTripletSelection:
-          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
-          Using normalized configuration "Debug"
+          Se crear├í "cmTC_416fe.dir\\Debug\\cmTC_416fe.tlog\\unsuccessfulbuild" porque se especific├│ "AlwaysCreate".
+          Aplicando tarea Touch a "cmTC_416fe.dir\\Debug\\cmTC_416fe.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_d0cae.dir\\Debug\\\\" /Fd"cmTC_d0cae.dir\\Debug\\vc145.pdb" /external:W1 /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.4\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_416fe.dir\\Debug\\\\" /Fd"cmTC_416fe.dir\\Debug\\vc145.pdb" /external:W1 /TC /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.51.36248 for x64
-          Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_d0cae.dir\\Debug\\\\" /Fd"cmTC_d0cae.dir\\Debug\\vc145.pdb" /external:W1 /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.4\\Modules\\CMakeCCompilerABI.c"
+          (C) Microsoft Corporation. Todos los derechos reservados.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_416fe.dir\\Debug\\\\" /Fd"cmTC_416fe.dir\\Debug\\vc145.pdb" /external:W1 /TC /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c"
           CMakeCCompilerABI.c
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-ia3q31\\Debug\\cmTC_d0cae.exe" /INCREMENTAL /ILK:"cmTC_d0cae.dir\\Debug\\cmTC_d0cae.ilk" /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\vcpkg\\installed\\x64-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Alumno/Documents/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-ia3q31/Debug/cmTC_d0cae.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/Alumno/Documents/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-ia3q31/Debug/cmTC_d0cae.lib" /MACHINE:X64  /machine:x64 cmTC_d0cae.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_d0cae.vcxproj -> C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-ia3q31\\Debug\\cmTC_d0cae.exe
-        AppLocalFromInstalled:
-          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-ia3q31\\Debug\\cmTC_d0cae.exe" "C:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_d0cae.dir\\Debug\\cmTC_d0cae.tlog\\cmTC_d0cae.write.1u.tlog" "cmTC_d0cae.dir\\Debug\\vcpkg.applocal.log"
-          'pwsh.exe' is not recognized as an internal or external command,
-          operable program or batch file.
-          The command "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-ia3q31\\Debug\\cmTC_d0cae.exe" "C:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_d0cae.dir\\Debug\\cmTC_d0cae.tlog\\cmTC_d0cae.write.1u.tlog" "cmTC_d0cae.dir\\Debug\\vcpkg.applocal.log"" exited with code 9009.
-          "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-ia3q31\\Debug\\cmTC_d0cae.exe" "C:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_d0cae.dir\\Debug\\cmTC_d0cae.tlog\\cmTC_d0cae.write.1u.tlog" "cmTC_d0cae.dir\\Debug\\vcpkg.applocal.log"
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-mcd33i\\Debug\\cmTC_416fe.exe" /INCREMENTAL /ILK:"cmTC_416fe.dir\\Debug\\cmTC_416fe.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Gio/Documents/GitHub/Original/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-mcd33i/Debug/cmTC_416fe.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/Gio/Documents/GitHub/Original/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-mcd33i/Debug/cmTC_416fe.lib" /MACHINE:X64  /machine:x64 cmTC_416fe.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_416fe.vcxproj -> C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-mcd33i\\Debug\\cmTC_416fe.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_d0cae.dir\\Debug\\cmTC_d0cae.tlog\\unsuccessfulbuild".
-          Touching "cmTC_d0cae.dir\\Debug\\cmTC_d0cae.tlog\\cmTC_d0cae.lastbuildstate".
-        Done Building Project "C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-ia3q31\\cmTC_d0cae.vcxproj" (default targets).
+          Se eliminar├í el archivo "cmTC_416fe.dir\\Debug\\cmTC_416fe.tlog\\unsuccessfulbuild".
+          Aplicando tarea Touch a "cmTC_416fe.dir\\Debug\\cmTC_416fe.tlog\\cmTC_416fe.lastbuildstate".
+        Compilaci├│n del proyecto terminada "C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-mcd33i\\cmTC_416fe.vcxproj" (destinos predeterminados).
         
-        Build succeeded.
-            0 Warning(s)
-            0 Error(s)
+        Compilaci├│n correcta.
+            0 Advertencia(s)
+            0 Errores
         
-        Time Elapsed 00:00:01.12
+        Tiempo transcurrido 00:00:01.52
         
       exitCode: 0
   -
     kind: "message-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake:291 (message)"
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:3 (project)"
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
-        link line: [  C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-ia3q31\\Debug\\cmTC_d0cae.exe" /INCREMENTAL /ILK:"cmTC_d0cae.dir\\Debug\\cmTC_d0cae.ilk" /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\vcpkg\\installed\\x64-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Alumno/Documents/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-ia3q31/Debug/cmTC_d0cae.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/Alumno/Documents/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-ia3q31/Debug/cmTC_d0cae.lib" /MACHINE:X64  /machine:x64 cmTC_d0cae.dir\\Debug\\CMakeCCompilerABI.obj] ==> linker [C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe]
-        linker tool for 'C': C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/HostX64/x64/link.exe 
+        linker tool for 'C': C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/HostX64/x64/link.exe
         implicit libs: []
         implicit objs: []
         implicit dirs: []
@@ -688,9 +779,9 @@ events:
   -
     kind: "message-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/Internal/CMakeDetermineLinkerId.cmake:41 (message)"
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake:337 (cmake_determine_linker_id)"
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:3 (project)"
     message: |
       Running the C compiler's linker: "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/HostX64/x64/link.exe" "-v"
@@ -699,190 +790,181 @@ events:
   -
     kind: "try_compile-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/Internal/CheckSourceCompiles.cmake:138 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/FindThreads.cmake:160 (check_c_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/FindThreads.cmake:226 (_threads_check_libc)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/FindThreads.cmake:160 (check_c_source_compiles)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/FindThreads.cmake:226 (_threads_check_libc)"
       - "CMakeLists.txt:60 (find_package)"
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "C:/Users/Alumno/Documents/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-vczi4t"
-      binary: "C:/Users/Alumno/Documents/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-vczi4t"
+      source: "C:/Users/Gio/Documents/GitHub/Original/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-dzbcx2"
+      binary: "C:/Users/Gio/Documents/GitHub/Original/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-dzbcx2"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
-      CMAKE_MODULE_PATH: "C:/Users/Alumno/Documents/CGA2026_3/Libs/glfw/CMake/modules"
+      CMAKE_MODULE_PATH: "C:/Users/Gio/Documents/GitHub/Original/CGA2026_3/Libs/glfw/CMake/modules"
     buildResult:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Alumno/Documents/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-vczi4t'
+        Change Dir: 'C:/Users/Gio/Documents/GitHub/Original/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-dzbcx2'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_59d78.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
-        MSBuild version 18.7.8+1ac568fee for .NET Framework
-        Build started 7/16/2026 5:57:40 PM.
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_f73f8.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        Versi├│n de MSBuild 18.8.2+ce25c0108 para .NET Framework
+        Compilaci├│n iniciada a las 20/07/2026 03:23:34 p. m..
         
-        Project "C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-vczi4t\\cmTC_59d78.vcxproj" on node 1 (default targets).
+        Proyecto "C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-dzbcx2\\cmTC_f73f8.vcxproj" en nodo 1 (destinos predeterminados).
         PrepareForBuild:
-          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-vczi4t\\Debug\\".
-          Creating directory "cmTC_59d78.dir\\Debug\\cmTC_59d78.tlog\\".
+          La salida estructurada est├í habilitada. El formato del diagn├│stico del compilador reflejar├í la jerarqu├¡a de errores. Consulte https://aka.ms/cpp/structured-output para obtener m├ís detalles.
+          Creando directorio "C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-dzbcx2\\Debug\\".
+          Creando directorio "cmTC_f73f8.dir\\Debug\\cmTC_f73f8.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_59d78.dir\\Debug\\cmTC_59d78.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_59d78.dir\\Debug\\cmTC_59d78.tlog\\unsuccessfulbuild".
-        VcpkgTripletSelection:
-          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
-          Using normalized configuration "Debug"
+          Se crear├í "cmTC_f73f8.dir\\Debug\\cmTC_f73f8.tlog\\unsuccessfulbuild" porque se especific├│ "AlwaysCreate".
+          Aplicando tarea Touch a "cmTC_f73f8.dir\\Debug\\cmTC_f73f8.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_59d78.dir\\Debug\\\\" /Fd"cmTC_59d78.dir\\Debug\\vc145.pdb" /external:W1 /TC /errorReport:queue "C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-vczi4t\\src.c"
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_f73f8.dir\\Debug\\\\" /Fd"cmTC_f73f8.dir\\Debug\\vc145.pdb" /external:W1 /TC /errorReport:queue "C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-dzbcx2\\src.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.51.36248 for x64
-          Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_59d78.dir\\Debug\\\\" /Fd"cmTC_59d78.dir\\Debug\\vc145.pdb" /external:W1 /TC /errorReport:queue "C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-vczi4t\\src.c"
+          (C) Microsoft Corporation. Todos los derechos reservados.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_f73f8.dir\\Debug\\\\" /Fd"cmTC_f73f8.dir\\Debug\\vc145.pdb" /external:W1 /TC /errorReport:queue "C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-dzbcx2\\src.c"
           src.c
-        C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-vczi4t\\src.c(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-vczi4t\\cmTC_59d78.vcxproj]
-        Done Building Project "C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-vczi4t\\cmTC_59d78.vcxproj" (default targets) -- FAILED.
+        C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-dzbcx2\\src.c(1,10): error C1083: No se puede abrir el archivo incluir: 'pthread.h': No such file or directory [C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-dzbcx2\\cmTC_f73f8.vcxproj]
+        Compilaci├│n del proyecto terminada "C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-dzbcx2\\cmTC_f73f8.vcxproj" (destinos predeterminados) -- ERROR.
         
-        Build FAILED.
+        ERROR al compilar.
         
-        "C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-vczi4t\\cmTC_59d78.vcxproj" (default target) (1) ->
-        (ClCompile target) -> 
-          C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-vczi4t\\src.c(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-vczi4t\\cmTC_59d78.vcxproj]
+        "C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-dzbcx2\\cmTC_f73f8.vcxproj" (destino predeterminado) (1) ->
+        (ClCompile destino) -> 
+          C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-dzbcx2\\src.c(1,10): error C1083: No se puede abrir el archivo incluir: 'pthread.h': No such file or directory [C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-dzbcx2\\cmTC_f73f8.vcxproj]
         
-            0 Warning(s)
-            1 Error(s)
+            0 Advertencia(s)
+            1 Errores
         
-        Time Elapsed 00:00:00.87
+        Tiempo transcurrido 00:00:01.44
         
       exitCode: 1
   -
     kind: "try_compile-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CheckLibraryExists.cmake:154 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/FindThreads.cmake:175 (check_library_exists)"
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/FindThreads.cmake:238 (_threads_check_lib)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CheckLibraryExists.cmake:154 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/FindThreads.cmake:175 (check_library_exists)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/FindThreads.cmake:238 (_threads_check_lib)"
       - "CMakeLists.txt:60 (find_package)"
     checks:
       - "Looking for pthread_create in pthreads"
     directories:
-      source: "C:/Users/Alumno/Documents/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-21mgzj"
-      binary: "C:/Users/Alumno/Documents/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-21mgzj"
+      source: "C:/Users/Gio/Documents/GitHub/Original/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-6e8nfq"
+      binary: "C:/Users/Gio/Documents/GitHub/Original/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-6e8nfq"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
-      CMAKE_MODULE_PATH: "C:/Users/Alumno/Documents/CGA2026_3/Libs/glfw/CMake/modules"
+      CMAKE_MODULE_PATH: "C:/Users/Gio/Documents/GitHub/Original/CGA2026_3/Libs/glfw/CMake/modules"
     buildResult:
       variable: "CMAKE_HAVE_PTHREADS_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Alumno/Documents/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-21mgzj'
+        Change Dir: 'C:/Users/Gio/Documents/GitHub/Original/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-6e8nfq'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_3b657.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
-        MSBuild version 18.7.8+1ac568fee for .NET Framework
-        Build started 7/16/2026 5:57:41 PM.
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_5d774.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        Versi├│n de MSBuild 18.8.2+ce25c0108 para .NET Framework
+        Compilaci├│n iniciada a las 20/07/2026 03:23:37 p. m..
         
-        Project "C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-21mgzj\\cmTC_3b657.vcxproj" on node 1 (default targets).
+        Proyecto "C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-6e8nfq\\cmTC_5d774.vcxproj" en nodo 1 (destinos predeterminados).
         PrepareForBuild:
-          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-21mgzj\\Debug\\".
-          Creating directory "cmTC_3b657.dir\\Debug\\cmTC_3b657.tlog\\".
+          La salida estructurada est├í habilitada. El formato del diagn├│stico del compilador reflejar├í la jerarqu├¡a de errores. Consulte https://aka.ms/cpp/structured-output para obtener m├ís detalles.
+          Creando directorio "C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-6e8nfq\\Debug\\".
+          Creando directorio "cmTC_5d774.dir\\Debug\\cmTC_5d774.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_3b657.dir\\Debug\\cmTC_3b657.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_3b657.dir\\Debug\\cmTC_3b657.tlog\\unsuccessfulbuild".
-        VcpkgTripletSelection:
-          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
-          Using normalized configuration "Debug"
+          Se crear├í "cmTC_5d774.dir\\Debug\\cmTC_5d774.tlog\\unsuccessfulbuild" porque se especific├│ "AlwaysCreate".
+          Aplicando tarea Touch a "cmTC_5d774.dir\\Debug\\cmTC_5d774.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_3b657.dir\\Debug\\\\" /Fd"cmTC_3b657.dir\\Debug\\vc145.pdb" /external:W1 /TC /errorReport:queue "C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-21mgzj\\CheckFunctionExists.c"
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_5d774.dir\\Debug\\\\" /Fd"cmTC_5d774.dir\\Debug\\vc145.pdb" /external:W1 /TC /errorReport:queue "C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-6e8nfq\\CheckFunctionExists.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.51.36248 for x64
-          Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_3b657.dir\\Debug\\\\" /Fd"cmTC_3b657.dir\\Debug\\vc145.pdb" /external:W1 /TC /errorReport:queue "C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-21mgzj\\CheckFunctionExists.c"
+          (C) Microsoft Corporation. Todos los derechos reservados.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_5d774.dir\\Debug\\\\" /Fd"cmTC_5d774.dir\\Debug\\vc145.pdb" /external:W1 /TC /errorReport:queue "C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-6e8nfq\\CheckFunctionExists.c"
           CheckFunctionExists.c
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-21mgzj\\Debug\\cmTC_3b657.exe" /INCREMENTAL /ILK:"cmTC_3b657.dir\\Debug\\cmTC_3b657.ilk" /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\vcpkg\\installed\\x64-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Alumno/Documents/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-21mgzj/Debug/cmTC_3b657.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/Alumno/Documents/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-21mgzj/Debug/cmTC_3b657.lib" /MACHINE:X64  /machine:x64 cmTC_3b657.dir\\Debug\\CheckFunctionExists.obj
-        LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-21mgzj\\cmTC_3b657.vcxproj]
-        Done Building Project "C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-21mgzj\\cmTC_3b657.vcxproj" (default targets) -- FAILED.
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-6e8nfq\\Debug\\cmTC_5d774.exe" /INCREMENTAL /ILK:"cmTC_5d774.dir\\Debug\\cmTC_5d774.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Gio/Documents/GitHub/Original/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-6e8nfq/Debug/cmTC_5d774.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/Gio/Documents/GitHub/Original/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-6e8nfq/Debug/cmTC_5d774.lib" /MACHINE:X64  /machine:x64 cmTC_5d774.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: no se puede abrir el archivo 'pthreads.lib' [C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-6e8nfq\\cmTC_5d774.vcxproj]
+        Compilaci├│n del proyecto terminada "C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-6e8nfq\\cmTC_5d774.vcxproj" (destinos predeterminados) -- ERROR.
         
-        Build FAILED.
+        ERROR al compilar.
         
-        "C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-21mgzj\\cmTC_3b657.vcxproj" (default target) (1) ->
-        (Link target) -> 
-          LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-21mgzj\\cmTC_3b657.vcxproj]
+        "C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-6e8nfq\\cmTC_5d774.vcxproj" (destino predeterminado) (1) ->
+        (Link destino) -> 
+          LINK : fatal error LNK1104: no se puede abrir el archivo 'pthreads.lib' [C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-6e8nfq\\cmTC_5d774.vcxproj]
         
-            0 Warning(s)
-            1 Error(s)
+            0 Advertencia(s)
+            1 Errores
         
-        Time Elapsed 00:00:00.78
+        Tiempo transcurrido 00:00:01.38
         
       exitCode: 1
   -
     kind: "try_compile-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CheckLibraryExists.cmake:154 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/FindThreads.cmake:175 (check_library_exists)"
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/FindThreads.cmake:239 (_threads_check_lib)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CheckLibraryExists.cmake:154 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/FindThreads.cmake:175 (check_library_exists)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/FindThreads.cmake:239 (_threads_check_lib)"
       - "CMakeLists.txt:60 (find_package)"
     checks:
       - "Looking for pthread_create in pthread"
     directories:
-      source: "C:/Users/Alumno/Documents/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-qhgr0w"
-      binary: "C:/Users/Alumno/Documents/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-qhgr0w"
+      source: "C:/Users/Gio/Documents/GitHub/Original/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-4b7v6w"
+      binary: "C:/Users/Gio/Documents/GitHub/Original/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-4b7v6w"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
-      CMAKE_MODULE_PATH: "C:/Users/Alumno/Documents/CGA2026_3/Libs/glfw/CMake/modules"
+      CMAKE_MODULE_PATH: "C:/Users/Gio/Documents/GitHub/Original/CGA2026_3/Libs/glfw/CMake/modules"
     buildResult:
       variable: "CMAKE_HAVE_PTHREAD_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Alumno/Documents/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-qhgr0w'
+        Change Dir: 'C:/Users/Gio/Documents/GitHub/Original/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-4b7v6w'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_6e337.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
-        MSBuild version 18.7.8+1ac568fee for .NET Framework
-        Build started 7/16/2026 5:57:42 PM.
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_2ce24.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        Versi├│n de MSBuild 18.8.2+ce25c0108 para .NET Framework
+        Compilaci├│n iniciada a las 20/07/2026 03:23:40 p. m..
         
-        Project "C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-qhgr0w\\cmTC_6e337.vcxproj" on node 1 (default targets).
+        Proyecto "C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-4b7v6w\\cmTC_2ce24.vcxproj" en nodo 1 (destinos predeterminados).
         PrepareForBuild:
-          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-qhgr0w\\Debug\\".
-          Creating directory "cmTC_6e337.dir\\Debug\\cmTC_6e337.tlog\\".
+          La salida estructurada est├í habilitada. El formato del diagn├│stico del compilador reflejar├í la jerarqu├¡a de errores. Consulte https://aka.ms/cpp/structured-output para obtener m├ís detalles.
+          Creando directorio "C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-4b7v6w\\Debug\\".
+          Creando directorio "cmTC_2ce24.dir\\Debug\\cmTC_2ce24.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_6e337.dir\\Debug\\cmTC_6e337.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_6e337.dir\\Debug\\cmTC_6e337.tlog\\unsuccessfulbuild".
-        VcpkgTripletSelection:
-          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
-          Using normalized configuration "Debug"
+          Se crear├í "cmTC_2ce24.dir\\Debug\\cmTC_2ce24.tlog\\unsuccessfulbuild" porque se especific├│ "AlwaysCreate".
+          Aplicando tarea Touch a "cmTC_2ce24.dir\\Debug\\cmTC_2ce24.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_6e337.dir\\Debug\\\\" /Fd"cmTC_6e337.dir\\Debug\\vc145.pdb" /external:W1 /TC /errorReport:queue "C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-qhgr0w\\CheckFunctionExists.c"
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_2ce24.dir\\Debug\\\\" /Fd"cmTC_2ce24.dir\\Debug\\vc145.pdb" /external:W1 /TC /errorReport:queue "C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-4b7v6w\\CheckFunctionExists.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.51.36248 for x64
-          Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_6e337.dir\\Debug\\\\" /Fd"cmTC_6e337.dir\\Debug\\vc145.pdb" /external:W1 /TC /errorReport:queue "C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-qhgr0w\\CheckFunctionExists.c"
+          (C) Microsoft Corporation. Todos los derechos reservados.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_2ce24.dir\\Debug\\\\" /Fd"cmTC_2ce24.dir\\Debug\\vc145.pdb" /external:W1 /TC /errorReport:queue "C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-4b7v6w\\CheckFunctionExists.c"
           CheckFunctionExists.c
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-qhgr0w\\Debug\\cmTC_6e337.exe" /INCREMENTAL /ILK:"cmTC_6e337.dir\\Debug\\cmTC_6e337.ilk" /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\vcpkg\\installed\\x64-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Alumno/Documents/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-qhgr0w/Debug/cmTC_6e337.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/Alumno/Documents/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-qhgr0w/Debug/cmTC_6e337.lib" /MACHINE:X64  /machine:x64 cmTC_6e337.dir\\Debug\\CheckFunctionExists.obj
-        LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-qhgr0w\\cmTC_6e337.vcxproj]
-        Done Building Project "C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-qhgr0w\\cmTC_6e337.vcxproj" (default targets) -- FAILED.
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-4b7v6w\\Debug\\cmTC_2ce24.exe" /INCREMENTAL /ILK:"cmTC_2ce24.dir\\Debug\\cmTC_2ce24.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Gio/Documents/GitHub/Original/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-4b7v6w/Debug/cmTC_2ce24.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/Gio/Documents/GitHub/Original/CGA2026_3/Libs/glfw/CMakeFiles/CMakeScratch/TryCompile-4b7v6w/Debug/cmTC_2ce24.lib" /MACHINE:X64  /machine:x64 cmTC_2ce24.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: no se puede abrir el archivo 'pthread.lib' [C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-4b7v6w\\cmTC_2ce24.vcxproj]
+        Compilaci├│n del proyecto terminada "C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-4b7v6w\\cmTC_2ce24.vcxproj" (destinos predeterminados) -- ERROR.
         
-        Build FAILED.
+        ERROR al compilar.
         
-        "C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-qhgr0w\\cmTC_6e337.vcxproj" (default target) (1) ->
-        (Link target) -> 
-          LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\Alumno\\Documents\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-qhgr0w\\cmTC_6e337.vcxproj]
+        "C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-4b7v6w\\cmTC_2ce24.vcxproj" (destino predeterminado) (1) ->
+        (Link destino) -> 
+          LINK : fatal error LNK1104: no se puede abrir el archivo 'pthread.lib' [C:\\Users\\Gio\\Documents\\GitHub\\Original\\CGA2026_3\\Libs\\glfw\\CMakeFiles\\CMakeScratch\\TryCompile-4b7v6w\\cmTC_2ce24.vcxproj]
         
-            0 Warning(s)
-            1 Error(s)
+            0 Advertencia(s)
+            1 Errores
         
-        Time Elapsed 00:00:00.78
+        Tiempo transcurrido 00:00:01.51
         
       exitCode: 1
   -
     kind: "find-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/FindDoxygen.cmake:771 (find_program)"
-      - "C:/Program Files/CMake/share/cmake-4.4/Modules/FindDoxygen.cmake:956 (_Doxygen_find_doxygen)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/FindDoxygen.cmake:770 (find_program)"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/FindDoxygen.cmake:955 (_Doxygen_find_doxygen)"
       - "docs/CMakeLists.txt:35 (find_package)"
     mode: "program"
     variable: "DOXYGEN_EXECUTABLE"
@@ -898,37 +980,45 @@ events:
     names:
       - "doxygen"
     candidate_directories:
+      - "C:/Users/Gio/.gemini/antigravity-ide/bin/"
       - "C:/Windows/System32/"
       - "C:/Windows/"
       - "C:/Windows/System32/wbem/"
       - "C:/Windows/System32/WindowsPowerShell/v1.0/"
       - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
       - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
       - "C:/Program Files/dotnet/"
-      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
-      - "C:/Program Files (x86)/QuickTime/QTSystem/"
-      - "C:/Program Files/CMake/bin/"
-      - "C:/Users/Alumno/AppData/Local/Microsoft/WindowsApps/"
-      - "C:/Users/Alumno/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Users/Gio/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Gio/AppData/Local/Programs/Antigravity IDE/bin/"
+      - "C:/Users/Gio/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/Gio/.dotnet/tools/"
       - "C:/Program Files/bin/"
       - "C:/Program Files/sbin/"
       - "C:/Program Files/"
       - "C:/Program Files (x86)/bin/"
       - "C:/Program Files (x86)/sbin/"
       - "C:/Program Files (x86)/"
-      - "C:/Program Files/CMake/bin/"
-      - "C:/Program Files/CMake/sbin/"
-      - "C:/Program Files/CMake/"
-      - "C:/Program Files/GLFW/bin/"
-      - "C:/Program Files/GLFW/sbin/"
-      - "C:/Program Files/GLFW/"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/sbin/"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/"
+      - "C:/Program Files (x86)/GLFW/bin/"
+      - "C:/Program Files (x86)/GLFW/sbin/"
+      - "C:/Program Files (x86)/GLFW/"
       - "/REGISTRY-NOTFOUND/bin/"
       - "/Applications/Doxygen.app/Contents/Resources/"
       - "/Applications/Doxygen.app/Contents/MacOS/"
       - "/Applications/Utilities/Doxygen.app/Contents/Resources/"
       - "/Applications/Utilities/Doxygen.app/Contents/MacOS/"
     searched_directories:
+      - "C:/Users/Gio/.gemini/antigravity-ide/bin/doxygen.com"
+      - "C:/Users/Gio/.gemini/antigravity-ide/bin/doxygen.exe"
+      - "C:/Users/Gio/.gemini/antigravity-ide/bin/doxygen"
       - "C:/Windows/System32/doxygen.com"
       - "C:/Windows/System32/doxygen.exe"
       - "C:/Windows/System32/doxygen"
@@ -944,30 +1034,42 @@ events:
       - "C:/Windows/System32/OpenSSH/doxygen.com"
       - "C:/Windows/System32/OpenSSH/doxygen.exe"
       - "C:/Windows/System32/OpenSSH/doxygen"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/doxygen.com"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/doxygen.exe"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/doxygen"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/doxygen.com"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/doxygen.exe"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/doxygen"
+      - "C:/Program Files/Git/cmd/doxygen.com"
+      - "C:/Program Files/Git/cmd/doxygen.exe"
+      - "C:/Program Files/Git/cmd/doxygen"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/doxygen.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/doxygen.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/doxygen"
       - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/doxygen.com"
       - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/doxygen.exe"
       - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/doxygen"
       - "C:/Program Files/dotnet/doxygen.com"
       - "C:/Program Files/dotnet/doxygen.exe"
       - "C:/Program Files/dotnet/doxygen"
-      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/doxygen.com"
-      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/doxygen.exe"
-      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/doxygen"
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/doxygen.com"
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/doxygen.exe"
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/doxygen"
-      - "C:/Program Files (x86)/QuickTime/QTSystem/doxygen.com"
-      - "C:/Program Files (x86)/QuickTime/QTSystem/doxygen.exe"
-      - "C:/Program Files (x86)/QuickTime/QTSystem/doxygen"
-      - "C:/Program Files/CMake/bin/doxygen.com"
-      - "C:/Program Files/CMake/bin/doxygen.exe"
-      - "C:/Program Files/CMake/bin/doxygen"
-      - "C:/Users/Alumno/AppData/Local/Microsoft/WindowsApps/doxygen.com"
-      - "C:/Users/Alumno/AppData/Local/Microsoft/WindowsApps/doxygen.exe"
-      - "C:/Users/Alumno/AppData/Local/Microsoft/WindowsApps/doxygen"
-      - "C:/Users/Alumno/AppData/Local/GitHubDesktop/bin/doxygen.com"
-      - "C:/Users/Alumno/AppData/Local/GitHubDesktop/bin/doxygen.exe"
-      - "C:/Users/Alumno/AppData/Local/GitHubDesktop/bin/doxygen"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/doxygen.com"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/doxygen.exe"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/doxygen"
+      - "C:/Users/Gio/AppData/Local/Microsoft/WindowsApps/doxygen.com"
+      - "C:/Users/Gio/AppData/Local/Microsoft/WindowsApps/doxygen.exe"
+      - "C:/Users/Gio/AppData/Local/Microsoft/WindowsApps/doxygen"
+      - "C:/Users/Gio/AppData/Local/Programs/Antigravity IDE/bin/doxygen.com"
+      - "C:/Users/Gio/AppData/Local/Programs/Antigravity IDE/bin/doxygen.exe"
+      - "C:/Users/Gio/AppData/Local/Programs/Antigravity IDE/bin/doxygen"
+      - "C:/Users/Gio/AppData/Local/GitHubDesktop/bin/doxygen.com"
+      - "C:/Users/Gio/AppData/Local/GitHubDesktop/bin/doxygen.exe"
+      - "C:/Users/Gio/AppData/Local/GitHubDesktop/bin/doxygen"
+      - "C:/Users/Gio/.dotnet/tools/doxygen.com"
+      - "C:/Users/Gio/.dotnet/tools/doxygen.exe"
+      - "C:/Users/Gio/.dotnet/tools/doxygen"
       - "C:/Program Files/bin/doxygen.com"
       - "C:/Program Files/bin/doxygen.exe"
       - "C:/Program Files/bin/doxygen"
@@ -986,24 +1088,24 @@ events:
       - "C:/Program Files (x86)/doxygen.com"
       - "C:/Program Files (x86)/doxygen.exe"
       - "C:/Program Files (x86)/doxygen"
-      - "C:/Program Files/CMake/bin/doxygen.com"
-      - "C:/Program Files/CMake/bin/doxygen.exe"
-      - "C:/Program Files/CMake/bin/doxygen"
-      - "C:/Program Files/CMake/sbin/doxygen.com"
-      - "C:/Program Files/CMake/sbin/doxygen.exe"
-      - "C:/Program Files/CMake/sbin/doxygen"
-      - "C:/Program Files/CMake/doxygen.com"
-      - "C:/Program Files/CMake/doxygen.exe"
-      - "C:/Program Files/CMake/doxygen"
-      - "C:/Program Files/GLFW/bin/doxygen.com"
-      - "C:/Program Files/GLFW/bin/doxygen.exe"
-      - "C:/Program Files/GLFW/bin/doxygen"
-      - "C:/Program Files/GLFW/sbin/doxygen.com"
-      - "C:/Program Files/GLFW/sbin/doxygen.exe"
-      - "C:/Program Files/GLFW/sbin/doxygen"
-      - "C:/Program Files/GLFW/doxygen.com"
-      - "C:/Program Files/GLFW/doxygen.exe"
-      - "C:/Program Files/GLFW/doxygen"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/doxygen.com"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/doxygen.exe"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/doxygen"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/sbin/doxygen.com"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/sbin/doxygen.exe"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/sbin/doxygen"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/doxygen.com"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/doxygen.exe"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/doxygen"
+      - "C:/Program Files (x86)/GLFW/bin/doxygen.com"
+      - "C:/Program Files (x86)/GLFW/bin/doxygen.exe"
+      - "C:/Program Files (x86)/GLFW/bin/doxygen"
+      - "C:/Program Files (x86)/GLFW/sbin/doxygen.com"
+      - "C:/Program Files (x86)/GLFW/sbin/doxygen.exe"
+      - "C:/Program Files (x86)/GLFW/sbin/doxygen"
+      - "C:/Program Files (x86)/GLFW/doxygen.com"
+      - "C:/Program Files (x86)/GLFW/doxygen.exe"
+      - "C:/Program Files (x86)/GLFW/doxygen"
       - "/REGISTRY-NOTFOUND/bin/doxygen.com"
       - "/REGISTRY-NOTFOUND/bin/doxygen.exe"
       - "/REGISTRY-NOTFOUND/bin/doxygen"
@@ -1022,23 +1124,28 @@ events:
     found: false
     search_context:
       ENV{PATH}:
-        - "C:\\windows\\system32"
-        - "C:\\windows"
-        - "C:\\windows\\System32\\Wbem"
-        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:/Users/Gio/.gemini/antigravity-ide/bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
         - "C:\\Program Files\\dotnet\\"
-        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
-        - "C:\\Program Files (x86)\\QuickTime\\QTSystem\\"
-        - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Users\\Alumno\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\Alumno\\AppData\\Local\\GitHubDesktop\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Program Files/GLFW"
+        - "C:\\Program Files\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:\\Users\\Gio\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Gio\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\Users\\Gio\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\Gio\\.dotnet\\tools"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/GLFW"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
         - "C:/Program Files (x86)"
-        - "C:/Program Files/CMake"
-        - "C:/Program Files/GLFW"
+        - "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake"
+        - "C:/Program Files (x86)/GLFW"
 ...
