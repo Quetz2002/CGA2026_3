@@ -2,13 +2,6 @@
 
 void Application::setup()
 {
-
-	//Crear Geometría
-	//Pasarsela al GPU
-	//Borrar datos de la RAM
-	//Cargar Shaders
-	//Compilar y ligar shaders
-
 	if (!glfwInit())
 	{
 		std::cerr << "Failed to initialize GLFW" << std::endl;
