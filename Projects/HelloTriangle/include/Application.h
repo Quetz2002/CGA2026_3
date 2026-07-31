@@ -1,7 +1,7 @@
 #pragma once
-#include <GLFW/glfw3.h>
-#include <iostream>
-
+#include <map>
+#include <string>
+#include "glad/glad.h"
 
 class Application
 {
@@ -11,10 +11,10 @@ public:
 	void draw();
 	~Application();
 
-	GLFWwindow* getWindow() const { return window; }
+	std::map<std::string, GLuint> geometry;
+	std::map<std::string, GLuint> programs;
+
 private:
-	GLFWwindow* window = nullptr;
-
-	static void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
-
+	void setupTriangle();
+	void setupShaders();
 };

@@ -79,7 +79,6 @@ GLuint InitializeProgram(std::string strVertexShader, std::string strFragmentSha
 	GLuint theProgram = CreateProgram(shaderList);
 
 	std::for_each(shaderList.begin(), shaderList.end(), glDeleteShader);
-	glUseProgram(theProgram);
 
 	return theProgram;
 }
