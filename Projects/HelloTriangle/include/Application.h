@@ -13,6 +13,9 @@ public:
 
 	std::map<std::string, GLuint> geometry;
 	std::map<std::string, GLuint> programs;
+	std::map<std::string, GLuint> uniforms;
+
+	float time{ 0.0f };
 
 private:
 	void setupTriangle();

@@ -50,6 +50,10 @@ void Application::setupShaders()
 	std::string vertexShader = loadTextFile("shaders/passthru.vert");
 	std::string fragmentShader = loadTextFile("shaders/passthru.frag");
 	programs["passthru"] = InitializeProgram(vertexShader, fragmentShader);
+
+	//Obtenemos la localidad de los chaders y
+	//la guardamos en C++ en nuestro mapa
+	uniforms["time"] = glGetUniformLocation(programs["passthru"], "time");
 }
 
 void Application::setup()
@@ -62,12 +66,17 @@ void Application::setup()
 }
 
 void Application::update()
-{}
+{
+	++time;
+}
 
 void Application::draw() 
 {
 	//Seleccionar programa (shaders)
 	glUseProgram(programs["passthru"]);
+
+	//doy valores a las uniform
+	glUniform1f(uniforms["time"], time);
 
 	//Seleccionar la geometria (el triangulo)
 	glBindVertexArray(geometry["triangulo"]);
