@@ -5,6 +5,7 @@
   </Configurations>
   <Project Path="HelloApplication/HelloApplication.vcxproj" Id="34308bb7-12c2-4bce-9868-9327976f25b9" />
   <Project Path="HelloGLFW/HelloGLFW.vcxproj" Id="4acbb7ec-e85c-4504-8299-b1ae251236cd" />
+  <Project Path="HelloPlane/HelloPlane.vcxproj" Id="fcd98dc5-6f40-4da1-8bcc-88e505a77bba" />
   <Project Path="HelloTriangle/HelloTriangle.vcxproj" Id="362a147b-2648-4572-be6f-40f7ceff68b2" />
   <Project Path="HelloWorld/HelloWorld.vcxproj" Id="f4d4e490-38a7-4b4c-aa3a-900076095e86" />
 </Solution>
