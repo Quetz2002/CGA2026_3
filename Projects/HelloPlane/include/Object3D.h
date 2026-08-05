@@ -3,9 +3,6 @@
 #include "glad/glad.h"
 #include "glm/glm.hpp"
 
-
-
-
 class Object3D
 {
 public:
@@ -22,4 +19,3 @@ public:
 	//Object3D();
 
 };
-
