@@ -1,4 +1,5 @@
 #include "Application.h"
+#include <GLFW/glfw3.h>
 #include <vector>
 #include "ShaderFuncs.h"
 #include <chrono>
@@ -17,7 +18,8 @@ void Application::setupShaders()
 	uniforms["time"] = glGetUniformLocation(programs["passthru"], "time");
 	uniforms["camera"] = glGetUniformLocation(programs["passthru"], "camera");
 	uniforms["modelTrans"] = glGetUniformLocation(programs["passthru"], "modelTrans");
-	uniforms["projction"] = glGetUniformLocation(programs["passthru"], "projection");
+	uniforms["projection"] = glGetUniformLocation(programs["passthru"], "projection");
+	uniforms["color"] = glGetUniformLocation(programs["passthru"], "color");
 }
 
 void Application::setup()
@@ -27,30 +29,78 @@ void Application::setup()
 	plane.cleanMemory();
 	geometry["plane"] = plane.vao;	//Cargar shaders, compilarlos y ligarlos
 	setupShaders();
+
+	glEnable(GL_DEPTH_TEST);
+	glDepthFunc(GL_LESS);
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 }
 
-void Application::update()
+void Application::update(GLFWwindow* window)
 {
-	// Convertir a milisegundos en punto flotante
-	auto ahora = std::chrono::system_clock::now();
-	// 2. Extraer los milisegundos desde epoch (1 de enero de 1970) como float
-	time = std::chrono::duration<float, std::milli>(ahora.time_since_epoch()).count();
-	
+	double currentTime = glfwGetTime();
+	if (lastTime == 0.0)
+	{
+		lastTime = currentTime;
+	}
+	float deltaTime = static_cast<float>(currentTime - lastTime);
+	lastTime = currentTime;
+	time = currentTime * 1000.0; // time in ms for shaders
+
+	if (deltaTime > 0.1f) deltaTime = 0.1f;
+
+	// Obtener la posición del cursor y el tamaño de la ventana
+	double xpos, ypos;
+	glfwGetCursorPos(window, &xpos, &ypos);
+
+	int width, height;
+	glfwGetWindowSize(window, &width, &height);
+
+	// Calcular offsets normalizados respecto al centro [-1.0, 1.0]
+	float ndx = 0.0f;
+	float ndy = 0.0f;
+	if (width > 0 && height > 0)
+	{
+		ndx = static_cast<float>((xpos - (width / 2.0)) / (width / 2.0));
+		ndy = static_cast<float>((ypos - (height / 2.0)) / (height / 2.0));
+	}
+	ndx = glm::clamp(ndx, -1.0f, 1.0f);
+	ndy = glm::clamp(ndy, -1.0f, 1.0f);
+
+	// Mapear a ángulos de rotación de vuelo:
+	// - Pitch (cabeceo alrededor de X): cursor abajo -> pitch arriba (rotación positiva)
+	// - Roll (alabeo alrededor de Z): cursor derecha -> roll derecha (rotación negativa)
+	// - Yaw (guiñada alreadedor de Y): cursor derecha -> guiñada derecha (rotación negativa)
+	float targetRoll = -ndx * glm::radians(45.0f);
+	float targetPitch = ndy * glm::radians(30.0f);
+	float targetYaw = -ndx * glm::radians(35.0f);
+
+	// Suavizado (inercia)
+	float lerpFactor = 5.0f * deltaTime;
+	if (lerpFactor > 1.0f) lerpFactor = 1.0f;
+
+	currentRoll = glm::mix(currentRoll, targetRoll, lerpFactor);
+	currentPitch = glm::mix(currentPitch, targetPitch, lerpFactor);
+	currentYaw = glm::mix(currentYaw, targetYaw, lerpFactor);
+
+	// Construir matrices
 	modelTrans = glm::mat4(1.0f);
+	modelTrans = glm::rotate(modelTrans, currentYaw, glm::vec3(0.0f, 1.0f, 0.0f));
+	modelTrans = glm::rotate(modelTrans, currentPitch, glm::vec3(1.0f, 0.0f, 0.0f));
+	modelTrans = glm::rotate(modelTrans, currentRoll, glm::vec3(0.0f, 0.0f, 1.0f));
 
 	glm::vec3 eye = glm::vec3(0.0f, 2.5f, 2.5f);
 	glm::vec3 center = glm::vec3(0.0f);
-	glm::vec3 up = glm::vec3(0.0f, 1.f, 0.0f);
+	glm::vec3 up = glm::vec3(0.0f, 1.0f, 0.0f);
 
 	camera = glm::lookAt(eye, center, up);
 
-	projection = glm::perspective(glm::radians(45.0f), 1024.0f/104.0f, 0.1f, 100.0f);
+	float aspect = height > 0 ? (static_cast<float>(width) / static_cast<float>(height)) : 1.0f;
+	projection = glm::perspective(glm::radians(45.0f), aspect, 0.1f, 100.0f);
 }
 
 void Application::draw() 
 {
-	glPolygonMode(GL_FRONT, GL_FILL);
-	glPolygonMode(GL_FRONT, GL_LINE);
 	//Seleccionar programa (shaders)
 	glUseProgram(programs["passthru"]);
 
@@ -63,8 +113,20 @@ void Application::draw()
 	//Seleccionar la geometria (el triangulo)
 	glBindVertexArray(geometry["plane"]);
 
-	//glDraw()
+	// 1. Dibujar el plano relleno con color oscuro (azul oscuro)
+	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+	glUniform4f(uniforms["color"], 0.1f, 0.12f, 0.22f, 0.8f);
 	glDrawArrays(GL_TRIANGLES, 0, plane.getNumVertex());
+
+	// 2. Dibujar la cuadrícula de alambre en color cian brillante con desplazamiento de polígono
+	glEnable(GL_POLYGON_OFFSET_LINE);
+	glPolygonOffset(-1.0f, -1.0f);
+	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+	glEnable(GL_LINE_SMOOTH);
+	glLineWidth(1.5f);
+	glUniform4f(uniforms["color"], 0.0f, 0.75f, 1.0f, 1.0f);
+	glDrawArrays(GL_TRIANGLES, 0, plane.getNumVertex());
+	glDisable(GL_POLYGON_OFFSET_LINE);
 }
 
 Application::~Application() 

@@ -9,7 +9,7 @@ class Application
 {
 public:
 	void setup();
-	void update();
+	void update(struct GLFWwindow* window);
 	void draw();
 	~Application();
 
@@ -27,4 +27,9 @@ public:
 
 private:
 	void setupShaders();
+
+	double lastTime{ 0.0 };
+	float currentRoll{ 0.0f };
+	float currentPitch{ 0.0f };
+	float currentYaw{ 0.0f };
 };

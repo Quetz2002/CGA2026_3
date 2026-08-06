@@ -3,14 +3,11 @@
 layout (location = 0) in vec4 vPosition;
 
 uniform float time;
-
-
+uniform mat4 modelTrans;
+uniform mat4 camera;
+uniform mat4 projection;
 
 void main ()
 {  	
-	vec4 newPosition;
-	newPosition.x = vPosition.x;
-	newPosition.y = vPosition.z;
-	newPosition.z = vPosition.y;
-	gl_Position = newPosition;
+	gl_Position = projection * camera * modelTrans * vPosition;
 }
