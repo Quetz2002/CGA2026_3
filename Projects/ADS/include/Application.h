@@ -5,6 +5,20 @@
 #include "Plane.h"
 #include "glm/gtc/matrix_transform.hpp"
 
+struct Material {
+	glm::vec4 ambient;
+	glm::vec4 diffuse;
+	glm::vec4 specular;
+	float shininess;
+};
+
+struct Light {
+	glm::vec4 ambient;
+	glm::vec4 diffuse;
+	glm::vec4 specular;
+	glm::vec3 position;
+};
+
 class Application
 {
 public:
@@ -24,6 +38,10 @@ public:
 	double time{ 0.0f };
 
 	Plane plane;
+
+	Material material;
+	Light light;
+	glm::vec3 viewPos;
 
 private:
 	void setupShaders();

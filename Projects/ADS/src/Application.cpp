@@ -13,22 +13,48 @@ void Application::setupShaders()
 	std::string fragmentShader = loadTextFile("shaders/passthru.frag");
 	programs["passthru"] = InitializeProgram(vertexShader, fragmentShader);
 
-	//Obtemenos la localidad de la variable en los shaders y
-	// la guardamos en c++ en nuestro mapa
-	uniforms["time"] = glGetUniformLocation(programs["passthru"], "time");
+	// Obtener localidades de variables uniform de matrices y color
 	uniforms["camera"] = glGetUniformLocation(programs["passthru"], "camera");
 	uniforms["modelTrans"] = glGetUniformLocation(programs["passthru"], "modelTrans");
 	uniforms["projection"] = glGetUniformLocation(programs["passthru"], "projection");
 	uniforms["color"] = glGetUniformLocation(programs["passthru"], "color");
+
+	// Obtener localidades de variables uniform de la estructura Material
+	uniforms["uMaterial.ambient"] = glGetUniformLocation(programs["passthru"], "uMaterial.ambient");
+	uniforms["uMaterial.diffuse"] = glGetUniformLocation(programs["passthru"], "uMaterial.diffuse");
+	uniforms["uMaterial.specular"] = glGetUniformLocation(programs["passthru"], "uMaterial.specular");
+	uniforms["uMaterial.shininess"] = glGetUniformLocation(programs["passthru"], "uMaterial.shininess");
+
+	// Obtener localidades de variables uniform de la estructura Light
+	uniforms["uLight.ambient"] = glGetUniformLocation(programs["passthru"], "uLight.ambient");
+	uniforms["uLight.diffuse"] = glGetUniformLocation(programs["passthru"], "uLight.diffuse");
+	uniforms["uLight.specular"] = glGetUniformLocation(programs["passthru"], "uLight.specular");
+	uniforms["uLight.position"] = glGetUniformLocation(programs["passthru"], "uLight.position");
+
+	// Uniforms de cámara/iluminación auxiliar
+	uniforms["uViewPos"] = glGetUniformLocation(programs["passthru"], "uViewPos");
+	uniforms["uUseLighting"] = glGetUniformLocation(programs["passthru"], "uUseLighting");
 }
 
 void Application::setup()
 {
-	//Crear Plano
+	// Crear Plano
 	plane.createPlane(100);
 	plane.cleanMemory();
-	geometry["plane"] = plane.vao;	//Cargar shaders, compilarlos y ligarlos
+	geometry["plane"] = plane.vao;	// Cargar shaders, compilarlos y ligarlos
 	setupShaders();
+
+	// Inicializar material (color azul brillante metálico con alto brillo)
+	material.ambient = glm::vec4(0.1f, 0.12f, 0.22f, 1.0f);
+	material.diffuse = glm::vec4(0.15f, 0.45f, 0.9f, 1.0f);
+	material.specular = glm::vec4(0.9f, 0.9f, 1.0f, 1.0f);
+	material.shininess = 64.0f;
+
+	// Inicializar luz (luz blanca estándar)
+	light.ambient = glm::vec4(0.2f, 0.2f, 0.2f, 1.0f);
+	light.diffuse = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
+	light.specular = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
+	light.position = glm::vec3(0.0f, 2.5f, 0.0f); // Se actualizará en el update
 
 	glEnable(GL_DEPTH_TEST);
 	glDepthFunc(GL_LESS);
@@ -45,7 +71,7 @@ void Application::update(GLFWwindow* window)
 	}
 	float deltaTime = static_cast<float>(currentTime - lastTime);
 	lastTime = currentTime;
-	time = currentTime * 1000.0; // time in ms for shaders
+	time = currentTime * 1000.0; // time in ms
 
 	if (deltaTime > 0.1f) deltaTime = 0.1f;
 
@@ -68,9 +94,6 @@ void Application::update(GLFWwindow* window)
 	ndy = glm::clamp(ndy, -1.0f, 1.0f);
 
 	// Mapear a ángulos de rotación de vuelo:
-	// - Pitch (cabeceo alrededor de X): cursor abajo -> pitch arriba (rotación positiva)
-	// - Roll (alabeo alrededor de Z): cursor derecha -> roll derecha (rotación negativa)
-	// - Yaw (guiñada alreadedor de Y): cursor derecha -> guiñada derecha (rotación negativa)
 	float targetRoll = -ndx * glm::radians(45.0f);
 	float targetPitch = ndy * glm::radians(30.0f);
 	float targetYaw = -ndx * glm::radians(35.0f);
@@ -94,6 +117,11 @@ void Application::update(GLFWwindow* window)
 	glm::vec3 up = glm::vec3(0.0f, 1.0f, 0.0f);
 
 	camera = glm::lookAt(eye, center, up);
+	viewPos = eye;
+
+	// Luz orbitando lentamente sobre el plano para apreciar los brillos especulares
+	float angle = static_cast<float>(currentTime) * 0.7f;
+	light.position = glm::vec3(3.0f * cos(angle), 2.5f, 3.0f * sin(angle));
 
 	float aspect = height > 0 ? (static_cast<float>(width) / static_cast<float>(height)) : 1.0f;
 	projection = glm::perspective(glm::radians(45.0f), aspect, 0.1f, 100.0f);
@@ -101,33 +129,44 @@ void Application::update(GLFWwindow* window)
 
 void Application::draw() 
 {
-	//Seleccionar programa (shaders)
+	// Seleccionar programa (shaders)
 	glUseProgram(programs["passthru"]);
 
-	//doy valores a las uniform
-	// Doy valores a las uniform
-	glUniform1f(uniforms["time"], time);
-	glUniform1f(uniforms["amp"], 0.2f);   // Ajusta la amplitud a gusto asi como la sal
-	glUniform1f(uniforms["frq"], 10.0f);  // Ajusta la frecuencia a gusto asi como la sal
-
+	// Matrices
 	glUniformMatrix4fv(uniforms["camera"], 1, GL_FALSE, glm::value_ptr(camera));
 	glUniformMatrix4fv(uniforms["modelTrans"], 1, GL_FALSE, glm::value_ptr(modelTrans));
 	glUniformMatrix4fv(uniforms["projection"], 1, GL_FALSE, glm::value_ptr(projection));
 
-	//Seleccionar la geometria (el triangulo)
+	// Pasar valores de Material
+	glUniform4fv(uniforms["uMaterial.ambient"], 1, glm::value_ptr(material.ambient));
+	glUniform4fv(uniforms["uMaterial.diffuse"], 1, glm::value_ptr(material.diffuse));
+	glUniform4fv(uniforms["uMaterial.specular"], 1, glm::value_ptr(material.specular));
+	glUniform1f(uniforms["uMaterial.shininess"], material.shininess);
+
+	// Pasar valores de Luz
+	glUniform4fv(uniforms["uLight.ambient"], 1, glm::value_ptr(light.ambient));
+	glUniform4fv(uniforms["uLight.diffuse"], 1, glm::value_ptr(light.diffuse));
+	glUniform4fv(uniforms["uLight.specular"], 1, glm::value_ptr(light.specular));
+	glUniform3fv(uniforms["uLight.position"], 1, glm::value_ptr(light.position));
+
+	// Pasar posición de cámara
+	glUniform3fv(uniforms["uViewPos"], 1, glm::value_ptr(viewPos));
+
+	// Seleccionar la geometria
 	glBindVertexArray(geometry["plane"]);
 
-	// 1. Dibujar el plano relleno con color oscuro (azul oscuro)
+	// 1. Dibujar el plano relleno con el modelo ADS activado
 	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-	glUniform4f(uniforms["color"], 0.1f, 0.12f, 0.22f, 0.8f);
+	glUniform1i(uniforms["uUseLighting"], 1);
 	glDrawArrays(GL_TRIANGLES, 0, plane.getNumVertex());
 
-	// 2. Dibujar la cuadrícula de alambre en color cian brillante con desplazamiento de polígono
+	// 2. Dibujar la cuadrícula de alambre en color cian brillante (sin modelo de iluminación ADS)
 	glEnable(GL_POLYGON_OFFSET_LINE);
 	glPolygonOffset(-1.0f, -1.0f);
 	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 	glEnable(GL_LINE_SMOOTH);
 	glLineWidth(1.5f);
+	glUniform1i(uniforms["uUseLighting"], 0);
 	glUniform4f(uniforms["color"], 0.0f, 0.75f, 1.0f, 1.0f);
 	glDrawArrays(GL_TRIANGLES, 0, plane.getNumVertex());
 	glDisable(GL_POLYGON_OFFSET_LINE);
