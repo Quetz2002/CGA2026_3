@@ -159,8 +159,10 @@
     <ClInclude Include="include\ShaderFuncs.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="shaders\passthru.frag" />
-    <None Include="shaders\passthru.vert" />
+    <None Include="shaders\PhongShadding.frag" />
+    <None Include="shaders\PhongShadding.vert" />
+    <None Include="shaders\Gouraud.frag" />
+    <None Include="shaders\Gouraud.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

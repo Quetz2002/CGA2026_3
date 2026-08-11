@@ -25,7 +25,7 @@ void Application::setupShaders()
 void Application::setup()
 {
 	//Crear Plano
-	plane.createPlane(100);
+	plane.createPlane(10);
 	plane.cleanMemory();
 	geometry["plane"] = plane.vao;	//Cargar shaders, compilarlos y ligarlos
 	setupShaders();
@@ -119,11 +119,11 @@ void Application::draw()
 	glDrawArrays(GL_TRIANGLES, 0, plane.getNumVertex());
 
 	// 2. Dibujar la cuadrícula de alambre en color cian brillante con desplazamiento de polígono
-	glEnable(GL_POLYGON_OFFSET_LINE);
-	glPolygonOffset(-1.0f, -1.0f);
-	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-	glEnable(GL_LINE_SMOOTH);
-	glLineWidth(1.5f);
+	//glEnable(GL_POLYGON_OFFSET_LINE);
+	//glPolygonOffset(-1.0f, -1.0f);
+	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+	//glEnable(GL_LINE_SMOOTH);
+	//glLineWidth(1.5f);
 	glUniform4f(uniforms["color"], 0.0f, 0.75f, 1.0f, 1.0f);
 	glDrawArrays(GL_TRIANGLES, 0, plane.getNumVertex());
 	glDisable(GL_POLYGON_OFFSET_LINE);

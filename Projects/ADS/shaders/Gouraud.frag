@@ -1,9 +1,10 @@
 #version 460 core
 
-out vec4 fragColor;
+layout (location = 0) in vec4 vPosition;
 
-in vec3 FragPos;
-in vec3 Normal;
+uniform mat4 modelTrans;
+uniform mat4 camera;
+uniform mat4 projection;
 
 struct Material {
     vec4 ambient;
@@ -25,6 +26,8 @@ uniform vec3 uViewPos;
 uniform int uUseLighting; // 1 para usar iluminación ADS, 0 para color plano (wireframe)
 uniform vec4 color;       // Color plano de fallback para wireframe
 
+out vec4 GouraudColor;
+
 // Función independiente para el componente Ambiental
 vec4 computeAmbient(Material mat, Light lit) {
     return mat.ambient * lit.ambient;
@@ -43,9 +46,17 @@ vec4 computeSpecular(Material mat, Light lit, vec3 normal, vec3 lightDir, vec3 v
     return spec * mat.specular * lit.specular;
 }
 
-void main()
+void main ()
 {
+    gl_Position = projection * camera * modelTrans * vPosition;
+
     if (uUseLighting != 0) {
+        // Posición del fragmento en espacio del mundo
+        vec3 FragPos = vec3(modelTrans * vPosition);
+        
+        // Normal predefinida (0.0, 1.0, 0.0) orientada hacia arriba, transformada a espacio del mundo
+        vec3 Normal = normalize(mat3(modelTrans) * vec3(0.0, 1.0, 0.0));
+        
         vec3 norm = normalize(Normal);
         vec3 lightDir = normalize(uLight.position - FragPos);
         vec3 viewDir = normalize(uViewPos - FragPos);
@@ -56,8 +67,8 @@ void main()
 
         vec4 result = ambient + diffuse + specular;
         result.a = uMaterial.diffuse.a; // Mantener la opacidad del material
-        fragColor = result;
+        GouraudColor = result;
     } else {
-        fragColor = color;
+        GouraudColor = color;
     }
 }

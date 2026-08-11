@@ -9,37 +9,38 @@
 
 void Application::setupShaders()
 {
-	std::string vertexShader = loadTextFile("shaders/passthru.vert");
-	std::string fragmentShader = loadTextFile("shaders/passthru.frag");
-	programs["passthru"] = InitializeProgram(vertexShader, fragmentShader);
+	// Carga invertida: el vertex shader está en .frag y el fragment shader en .vert
+	std::string vertexShader = loadTextFile("shaders/Gouraud.frag");
+	std::string fragmentShader = loadTextFile("shaders/Gouraud.vert");
+	programs["Gouraud"] = InitializeProgram(vertexShader, fragmentShader);
 
 	// Obtener localidades de variables uniform de matrices y color
-	uniforms["camera"] = glGetUniformLocation(programs["passthru"], "camera");
-	uniforms["modelTrans"] = glGetUniformLocation(programs["passthru"], "modelTrans");
-	uniforms["projection"] = glGetUniformLocation(programs["passthru"], "projection");
-	uniforms["color"] = glGetUniformLocation(programs["passthru"], "color");
+	uniforms["camera"] = glGetUniformLocation(programs["Gouraud"], "camera");
+	uniforms["modelTrans"] = glGetUniformLocation(programs["Gouraud"], "modelTrans");
+	uniforms["projection"] = glGetUniformLocation(programs["Gouraud"], "projection");
+	uniforms["color"] = glGetUniformLocation(programs["Gouraud"], "color");
 
 	// Obtener localidades de variables uniform de la estructura Material
-	uniforms["uMaterial.ambient"] = glGetUniformLocation(programs["passthru"], "uMaterial.ambient");
-	uniforms["uMaterial.diffuse"] = glGetUniformLocation(programs["passthru"], "uMaterial.diffuse");
-	uniforms["uMaterial.specular"] = glGetUniformLocation(programs["passthru"], "uMaterial.specular");
-	uniforms["uMaterial.shininess"] = glGetUniformLocation(programs["passthru"], "uMaterial.shininess");
+	uniforms["uMaterial.ambient"] = glGetUniformLocation(programs["Gouraud"], "uMaterial.ambient");
+	uniforms["uMaterial.diffuse"] = glGetUniformLocation(programs["Gouraud"], "uMaterial.diffuse");
+	uniforms["uMaterial.specular"] = glGetUniformLocation(programs["Gouraud"], "uMaterial.specular");
+	uniforms["uMaterial.shininess"] = glGetUniformLocation(programs["Gouraud"], "uMaterial.shininess");
 
 	// Obtener localidades de variables uniform de la estructura Light
-	uniforms["uLight.ambient"] = glGetUniformLocation(programs["passthru"], "uLight.ambient");
-	uniforms["uLight.diffuse"] = glGetUniformLocation(programs["passthru"], "uLight.diffuse");
-	uniforms["uLight.specular"] = glGetUniformLocation(programs["passthru"], "uLight.specular");
-	uniforms["uLight.position"] = glGetUniformLocation(programs["passthru"], "uLight.position");
+	uniforms["uLight.ambient"] = glGetUniformLocation(programs["Gouraud"], "uLight.ambient");
+	uniforms["uLight.diffuse"] = glGetUniformLocation(programs["Gouraud"], "uLight.diffuse");
+	uniforms["uLight.specular"] = glGetUniformLocation(programs["Gouraud"], "uLight.specular");
+	uniforms["uLight.position"] = glGetUniformLocation(programs["Gouraud"], "uLight.position");
 
 	// Uniforms de cámara/iluminación auxiliar
-	uniforms["uViewPos"] = glGetUniformLocation(programs["passthru"], "uViewPos");
-	uniforms["uUseLighting"] = glGetUniformLocation(programs["passthru"], "uUseLighting");
+	uniforms["uViewPos"] = glGetUniformLocation(programs["Gouraud"], "uViewPos");
+	uniforms["uUseLighting"] = glGetUniformLocation(programs["Gouraud"], "uUseLighting");
 }
 
 void Application::setup()
 {
 	// Crear Plano
-	plane.createPlane(100);
+	plane.createPlane(10);
 	plane.cleanMemory();
 	geometry["plane"] = plane.vao;	// Cargar shaders, compilarlos y ligarlos
 	setupShaders();
@@ -119,9 +120,8 @@ void Application::update(GLFWwindow* window)
 	camera = glm::lookAt(eye, center, up);
 	viewPos = eye;
 
-	// Luz orbitando lentamente sobre el plano para apreciar los brillos especulares
-	float angle = static_cast<float>(currentTime) * 0.7f;
-	light.position = glm::vec3(3.0f * cos(angle), 2.5f, 3.0f * sin(angle));
+	// Luz fija sobre el plano para una iluminación constante
+	light.position = glm::vec3(0.0f, 2.5f, 0.0f);
 
 	float aspect = height > 0 ? (static_cast<float>(width) / static_cast<float>(height)) : 1.0f;
 	projection = glm::perspective(glm::radians(45.0f), aspect, 0.1f, 100.0f);
@@ -130,7 +130,7 @@ void Application::update(GLFWwindow* window)
 void Application::draw() 
 {
 	// Seleccionar programa (shaders)
-	glUseProgram(programs["passthru"]);
+	glUseProgram(programs["Gouraud"]);
 
 	// Matrices
 	glUniformMatrix4fv(uniforms["camera"], 1, GL_FALSE, glm::value_ptr(camera));
@@ -161,10 +161,10 @@ void Application::draw()
 	glDrawArrays(GL_TRIANGLES, 0, plane.getNumVertex());
 
 	// 2. Dibujar la cuadrícula de alambre en color cian brillante (sin modelo de iluminación ADS)
-	glEnable(GL_POLYGON_OFFSET_LINE);
-	glPolygonOffset(-1.0f, -1.0f);
-	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-	glEnable(GL_LINE_SMOOTH);
+	//glEnable(GL_POLYGON_OFFSET_LINE);
+	//glPolygonOffset(-1.0f, -1.0f);
+	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+	//glEnable(GL_LINE_SMOOTH);
 	glLineWidth(1.5f);
 	glUniform1i(uniforms["uUseLighting"], 0);
 	glUniform4f(uniforms["color"], 0.0f, 0.75f, 1.0f, 1.0f);
