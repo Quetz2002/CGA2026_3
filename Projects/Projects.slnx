@@ -4,6 +4,7 @@
     <Platform Name="x86" />
   </Configurations>
   <Project Path="ADS/Plane.vcxproj" Id="690f19b0-f5da-47aa-933b-35afcba2d42f" />
+  <Project Path="GouraudPhongShading/GouraudPhongShading.vcxproj" Id="e5655c0a-561e-4615-a6a4-f27283255ace" />
   <Project Path="HelloApplication/HelloApplication.vcxproj" Id="34308bb7-12c2-4bce-9868-9327976f25b9" />
   <Project Path="HelloGLFW/HelloGLFW.vcxproj" Id="4acbb7ec-e85c-4504-8299-b1ae251236cd" />
   <Project Path="HelloPlane/HelloPlane.vcxproj" Id="b91f511a-51c1-43bc-839a-5b07375d7488" />
