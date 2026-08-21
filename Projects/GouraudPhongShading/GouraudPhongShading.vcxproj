@@ -158,10 +158,10 @@
     <ClInclude Include="include\ShaderFuncs.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="shaders\Gouraud.frag" />
-    <None Include="shaders\Gouraud.vert" />
     <None Include="shaders\PhongShadding.frag" />
     <None Include="shaders\PhongShadding.vert" />
+    <None Include="shaders\Gourud.frag" />
+    <None Include="shaders\Gouraud.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

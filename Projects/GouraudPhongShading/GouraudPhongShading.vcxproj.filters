@@ -49,16 +49,16 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="shaders\Gouraud.frag">
-      <Filter>Shaders</Filter>
-    </None>
-    <None Include="shaders\Gouraud.vert">
-      <Filter>Shaders</Filter>
-    </None>
     <None Include="shaders\PhongShadding.frag">
       <Filter>Shaders</Filter>
     </None>
     <None Include="shaders\PhongShadding.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\Gourud.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\Gouraud.vert">
       <Filter>Shaders</Filter>
     </None>
   </ItemGroup>
