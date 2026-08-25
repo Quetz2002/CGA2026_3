@@ -48,14 +48,14 @@ vec4 computeSpecular(Material mat, Light lit, vec3 normal, vec3 lightDir, vec3 v
 
 void main ()
 {
-    gl_Position = projection * camera * modelTrans * vPosition;
 
     if (uUseLighting != 0) {
         // Posición del fragmento en espacio del mundo
         vec3 FragPos = vec3(modelTrans * vPosition);
         
         // Normal predefinida (0.0, 1.0, 0.0) orientada hacia arriba, transformada a espacio del mundo
-        vec3 Normal = normalize(mat3(modelTrans) * vec3(0.0, 1.0, 0.0));
+        vec3 Normal = mat3(modelTrans) * vec3(0.0, 1.0, 0.0);
+        Normal = transpose(inverse(mat3(camera * modelTrans))) * Normal;
         
         vec3 norm = normalize(Normal);
         vec3 lightDir = normalize(uLight.position - FragPos);
@@ -71,4 +71,5 @@ void main ()
     } else {
         GouraudColor = color;
     }
+    gl_Position = projection * camera * modelTrans * vPosition;
 }

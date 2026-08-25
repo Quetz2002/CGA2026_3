@@ -25,6 +25,7 @@ uniform Light uLight;
 uniform vec3 uViewPos;
 uniform int uUseLighting; // 1 para usar iluminación ADS, 0 para color plano (wireframe)
 uniform vec4 color;       // Color plano de fallback para wireframe
+uniform float uTime;      // Tiempo para animar la sábana
 
 out vec4 GouraudColor;
 
@@ -48,16 +49,39 @@ vec4 computeSpecular(Material mat, Light lit, vec3 normal, vec3 lightDir, vec3 v
 
 void main ()
 {
-    gl_Position = projection * camera * modelTrans * vPosition;
+    // Parámetros de la onda radial (gota de agua)
+    float amp = 0.15;      // Amplitud de la onda
+    float k = 15.0;        // Frecuencia espacial (número de anillos)
+    float speed = 5.0;     // Velocidad de propagación de las ondas
+    float alpha = 0.8;     // Coeficiente de atenuación/decaimiento hacia los bordes
+
+    // Distancia desde el centro (0,0), evitando la división por cero
+    float r = length(vPosition.xz);
+    r = max(r, 0.0001);
+
+    // Calcular posición y (gota cayendo en el centro con decaimiento exponencial)
+    vec4 animatedPos = vPosition;
+    float phase = k * r - speed * uTime;
+    float decay = exp(-alpha * r);
+    animatedPos.y = amp * decay * cos(phase);
+
+    gl_Position = projection * camera * modelTrans * animatedPos;
 
     if (uUseLighting != 0) {
-        // Posición del fragmento en espacio del mundo
-        vec3 FragPos = vec3(modelTrans * vPosition);
+        // Posición en espacio del mundo
+        vec3 FragPos = vec3(modelTrans * animatedPos);
         
-        // Normal predefinida (0.0, 1.0, 0.0) orientada hacia arriba, transformada a espacio del mundo
-        vec3 Normal = normalize(mat3(modelTrans) * vec3(0.0, 1.0, 0.0));
+        // Derivada de y respecto a la distancia radial r (dy/dr)
+        float dy_dr = -amp * decay * (alpha * cos(phase) + k * sin(phase));
         
-        vec3 norm = normalize(Normal);
+        // Derivadas parciales con respecto a X y Z usando la regla de la cadena
+        float dy_dx = dy_dr * (vPosition.x / r);
+        float dy_dz = dy_dr * (vPosition.z / r);
+        vec3 localNormal = vec3(-dy_dx, 1.0, -dy_dz);
+        
+        mat3 normalMatrix = transpose(inverse(mat3(modelTrans)));
+        vec3 norm = normalize(normalMatrix * localNormal);
+        
         vec3 lightDir = normalize(uLight.position - FragPos);
         vec3 viewDir = normalize(uViewPos - FragPos);
 

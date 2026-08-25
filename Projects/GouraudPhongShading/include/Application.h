@@ -43,6 +43,8 @@ public:
 	Light light;
 	glm::vec3 viewPos;
 
+	bool usePhong{ false };
+
 private:
 	void setupShaders();
 

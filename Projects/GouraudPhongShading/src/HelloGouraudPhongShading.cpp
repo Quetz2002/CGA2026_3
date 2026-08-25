@@ -2,6 +2,7 @@
 #include "glad/glad.h"
 #include <GLFW/glfw3.h>
 #include "Application.h"
+#include <iostream>
 
 Application app;
 
@@ -10,6 +11,11 @@ void myFirstCallback(GLFWwindow* window, int key, int scancode, int action, int 
     if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
     {
         glfwSetWindowShouldClose(window, 1);
+    }
+    if (key == GLFW_KEY_S && action == GLFW_PRESS)
+    {
+        app.usePhong = !app.usePhong;
+        std::cout << "Shader cambiado a: " << (app.usePhong ? "Phong Shading" : "Gouraud Shading") << std::endl;
     }
 }
 

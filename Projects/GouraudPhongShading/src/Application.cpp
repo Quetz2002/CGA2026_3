@@ -9,32 +9,50 @@
 
 void Application::setupShaders()
 {
+	// 1. COMPILAR PROGRAMA GOURAUD
 	// Carga invertida: el vertex shader está en .frag y el fragment shader en .vert
-	std::string vertexShader = loadTextFile("shaders/Gouraud.frag");
-	std::string fragmentShader = loadTextFile("shaders/Gouraud.vert");
-	programs["Gouraud"] = InitializeProgram(vertexShader, fragmentShader);
+	std::string vGouraud = loadTextFile("shaders/PhongShadding.frag");
+	std::string fGouraud = loadTextFile("shaders/PhongShadding.vert");
+	programs["Gouraud"] = InitializeProgram(vGouraud, fGouraud);
 
-	// Obtener localidades de variables uniform de matrices y color
-	uniforms["camera"] = glGetUniformLocation(programs["Gouraud"], "camera");
-	uniforms["modelTrans"] = glGetUniformLocation(programs["Gouraud"], "modelTrans");
-	uniforms["projection"] = glGetUniformLocation(programs["Gouraud"], "projection");
-	uniforms["color"] = glGetUniformLocation(programs["Gouraud"], "color");
+	// 2. COMPILAR PROGRAMA PHONG
+	std::string vPhong = loadTextFile("shaders/Gourud.frag");
+	std::string fPhong = loadTextFile("shaders/Gouraud.vert");
+	programs["Phong"] = InitializeProgram(vPhong, fPhong);
 
-	// Obtener localidades de variables uniform de la estructura Material
-	uniforms["uMaterial.ambient"] = glGetUniformLocation(programs["Gouraud"], "uMaterial.ambient");
-	uniforms["uMaterial.diffuse"] = glGetUniformLocation(programs["Gouraud"], "uMaterial.diffuse");
-	uniforms["uMaterial.specular"] = glGetUniformLocation(programs["Gouraud"], "uMaterial.specular");
-	uniforms["uMaterial.shininess"] = glGetUniformLocation(programs["Gouraud"], "uMaterial.shininess");
+	// 3. OBTENER UNIFORMS PARA GOURAUD
+	uniforms["Gouraud_camera"] = glGetUniformLocation(programs["Gouraud"], "camera");
+	uniforms["Gouraud_modelTrans"] = glGetUniformLocation(programs["Gouraud"], "modelTrans");
+	uniforms["Gouraud_projection"] = glGetUniformLocation(programs["Gouraud"], "projection");
+	uniforms["Gouraud_color"] = glGetUniformLocation(programs["Gouraud"], "color");
+	uniforms["Gouraud_uMaterial.ambient"] = glGetUniformLocation(programs["Gouraud"], "uMaterial.ambient");
+	uniforms["Gouraud_uMaterial.diffuse"] = glGetUniformLocation(programs["Gouraud"], "uMaterial.diffuse");
+	uniforms["Gouraud_uMaterial.specular"] = glGetUniformLocation(programs["Gouraud"], "uMaterial.specular");
+	uniforms["Gouraud_uMaterial.shininess"] = glGetUniformLocation(programs["Gouraud"], "uMaterial.shininess");
+	uniforms["Gouraud_uLight.ambient"] = glGetUniformLocation(programs["Gouraud"], "uLight.ambient");
+	uniforms["Gouraud_uLight.diffuse"] = glGetUniformLocation(programs["Gouraud"], "uLight.diffuse");
+	uniforms["Gouraud_uLight.specular"] = glGetUniformLocation(programs["Gouraud"], "uLight.specular");
+	uniforms["Gouraud_uLight.position"] = glGetUniformLocation(programs["Gouraud"], "uLight.position");
+	uniforms["Gouraud_uViewPos"] = glGetUniformLocation(programs["Gouraud"], "uViewPos");
+	uniforms["Gouraud_uUseLighting"] = glGetUniformLocation(programs["Gouraud"], "uUseLighting");
+	uniforms["Gouraud_uTime"] = glGetUniformLocation(programs["Gouraud"], "uTime");
 
-	// Obtener localidades de variables uniform de la estructura Light
-	uniforms["uLight.ambient"] = glGetUniformLocation(programs["Gouraud"], "uLight.ambient");
-	uniforms["uLight.diffuse"] = glGetUniformLocation(programs["Gouraud"], "uLight.diffuse");
-	uniforms["uLight.specular"] = glGetUniformLocation(programs["Gouraud"], "uLight.specular");
-	uniforms["uLight.position"] = glGetUniformLocation(programs["Gouraud"], "uLight.position");
-
-	// Uniforms de cámara/iluminación auxiliar
-	uniforms["uViewPos"] = glGetUniformLocation(programs["Gouraud"], "uViewPos");
-	uniforms["uUseLighting"] = glGetUniformLocation(programs["Gouraud"], "uUseLighting");
+	// 4. OBTENER UNIFORMS PARA PHONG
+	uniforms["Phong_camera"] = glGetUniformLocation(programs["Phong"], "camera");
+	uniforms["Phong_modelTrans"] = glGetUniformLocation(programs["Phong"], "modelTrans");
+	uniforms["Phong_projection"] = glGetUniformLocation(programs["Phong"], "projection");
+	uniforms["Phong_color"] = glGetUniformLocation(programs["Phong"], "color");
+	uniforms["Phong_uMaterial.ambient"] = glGetUniformLocation(programs["Phong"], "uMaterial.ambient");
+	uniforms["Phong_uMaterial.diffuse"] = glGetUniformLocation(programs["Phong"], "uMaterial.diffuse");
+	uniforms["Phong_uMaterial.specular"] = glGetUniformLocation(programs["Phong"], "uMaterial.specular");
+	uniforms["Phong_uMaterial.shininess"] = glGetUniformLocation(programs["Phong"], "uMaterial.shininess");
+	uniforms["Phong_uLight.ambient"] = glGetUniformLocation(programs["Phong"], "uLight.ambient");
+	uniforms["Phong_uLight.diffuse"] = glGetUniformLocation(programs["Phong"], "uLight.diffuse");
+	uniforms["Phong_uLight.specular"] = glGetUniformLocation(programs["Phong"], "uLight.specular");
+	uniforms["Phong_uLight.position"] = glGetUniformLocation(programs["Phong"], "uLight.position");
+	uniforms["Phong_uViewPos"] = glGetUniformLocation(programs["Phong"], "uViewPos");
+	uniforms["Phong_uUseLighting"] = glGetUniformLocation(programs["Phong"], "uUseLighting");
+	uniforms["Phong_uTime"] = glGetUniformLocation(programs["Phong"], "uTime");
 }
 
 void Application::setup()
@@ -129,47 +147,48 @@ void Application::update(GLFWwindow* window)
 
 void Application::draw() 
 {
+	std::string prefix = usePhong ? "Phong_" : "Gouraud_";
+	GLuint program = usePhong ? programs["Phong"] : programs["Gouraud"];
+
 	// Seleccionar programa (shaders)
-	glUseProgram(programs["Gouraud"]);
+	glUseProgram(program);
 
 	// Matrices
-	glUniformMatrix4fv(uniforms["camera"], 1, GL_FALSE, glm::value_ptr(camera));
-	glUniformMatrix4fv(uniforms["modelTrans"], 1, GL_FALSE, glm::value_ptr(modelTrans));
-	glUniformMatrix4fv(uniforms["projection"], 1, GL_FALSE, glm::value_ptr(projection));
+	glUniformMatrix4fv(uniforms[prefix + "camera"], 1, GL_FALSE, glm::value_ptr(camera));
+	glUniformMatrix4fv(uniforms[prefix + "modelTrans"], 1, GL_FALSE, glm::value_ptr(modelTrans));
+	glUniformMatrix4fv(uniforms[prefix + "projection"], 1, GL_FALSE, glm::value_ptr(projection));
 
 	// Pasar valores de Material
-	glUniform4fv(uniforms["uMaterial.ambient"], 1, glm::value_ptr(material.ambient));
-	glUniform4fv(uniforms["uMaterial.diffuse"], 1, glm::value_ptr(material.diffuse));
-	glUniform4fv(uniforms["uMaterial.specular"], 1, glm::value_ptr(material.specular));
-	glUniform1f(uniforms["uMaterial.shininess"], material.shininess);
+	glUniform4fv(uniforms[prefix + "uMaterial.ambient"], 1, glm::value_ptr(material.ambient));
+	glUniform4fv(uniforms[prefix + "uMaterial.diffuse"], 1, glm::value_ptr(material.diffuse));
+	glUniform4fv(uniforms[prefix + "uMaterial.specular"], 1, glm::value_ptr(material.specular));
+	glUniform1f(uniforms[prefix + "uMaterial.shininess"], material.shininess);
 
 	// Pasar valores de Luz
-	glUniform4fv(uniforms["uLight.ambient"], 1, glm::value_ptr(light.ambient));
-	glUniform4fv(uniforms["uLight.diffuse"], 1, glm::value_ptr(light.diffuse));
-	glUniform4fv(uniforms["uLight.specular"], 1, glm::value_ptr(light.specular));
-	glUniform3fv(uniforms["uLight.position"], 1, glm::value_ptr(light.position));
+	glUniform4fv(uniforms[prefix + "uLight.ambient"], 1, glm::value_ptr(light.ambient));
+	glUniform4fv(uniforms[prefix + "uLight.diffuse"], 1, glm::value_ptr(light.diffuse));
+	glUniform4fv(uniforms[prefix + "uLight.specular"], 1, glm::value_ptr(light.specular));
+	glUniform3fv(uniforms[prefix + "uLight.position"], 1, glm::value_ptr(light.position));
 
 	// Pasar posición de cámara
-	glUniform3fv(uniforms["uViewPos"], 1, glm::value_ptr(viewPos));
+	glUniform3fv(uniforms[prefix + "uViewPos"], 1, glm::value_ptr(viewPos));
+
+	// Pasar tiempo para la sábana animada (en segundos)
+	glUniform1f(uniforms[prefix + "uTime"], static_cast<float>(time * 0.001));
 
 	// Seleccionar la geometria
 	glBindVertexArray(geometry["plane"]);
 
 	// 1. Dibujar el plano relleno con el modelo ADS activado
 	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-	glUniform1i(uniforms["uUseLighting"], 1);
+	glUniform1i(uniforms[prefix + "uUseLighting"], 1);
 	glDrawArrays(GL_TRIANGLES, 0, plane.getNumVertex());
 
 	// 2. Dibujar la cuadrícula de alambre en color cian brillante (sin modelo de iluminación ADS)
-	//glEnable(GL_POLYGON_OFFSET_LINE);
-	//glPolygonOffset(-1.0f, -1.0f);
-	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-	//glEnable(GL_LINE_SMOOTH);
 	glLineWidth(1.5f);
-	glUniform1i(uniforms["uUseLighting"], 0);
-	glUniform4f(uniforms["color"], 0.0f, 0.75f, 1.0f, 1.0f);
+	glUniform1i(uniforms[prefix + "uUseLighting"], 0);
+	glUniform4f(uniforms[prefix + "color"], 0.0f, 0.75f, 1.0f, 1.0f);
 	glDrawArrays(GL_TRIANGLES, 0, plane.getNumVertex());
-	glDisable(GL_POLYGON_OFFSET_LINE);
 }
 
 Application::~Application() 

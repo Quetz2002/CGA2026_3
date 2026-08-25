@@ -40,7 +40,7 @@ void Application::setupShaders()
 void Application::setup()
 {
 	// Crear Plano
-	plane.createPlane(10);
+	plane.createPlane(200);
 	plane.cleanMemory();
 	geometry["plane"] = plane.vao;	// Cargar shaders, compilarlos y ligarlos
 	setupShaders();
