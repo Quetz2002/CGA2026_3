@@ -23,6 +23,7 @@ void Application::setupShaders()
 	uniforms["modelTrans"] = glGetUniformLocation(programs["passthru"], "modelTrans");
 	uniforms["projection"] = glGetUniformLocation(programs["passthru"], "projection");
 	uniforms["color"] = glGetUniformLocation(programs["passthru"], "color");
+	uniforms["texture0"] = glGetUniformLocation(programs["transforms"], "texture0");
 }
 
 GLuint Application::setupTexture(const std::string& filename)
@@ -56,11 +57,11 @@ GLuint Application::setupTexture(const std::string& filename)
 void Application::setup()
 {
 	//Crear Plano
-	plane.createPlane(10);
+	plane.createPlane(1);
 	plane.cleanMemory();
 	geometry["plane"] = plane.vao;	//Cargar shaders, compilarlos y ligarlos
 	setupShaders();
-	setupTexture("Textures/Onyx006_2K-PNG_Color.png");
+	textures["cola"] = setupTexture("Textures / Onyx006_2K - PNG_Color.png");
 
 	glEnable(GL_DEPTH_TEST);
 	glDepthFunc(GL_LESS);
@@ -159,6 +160,11 @@ void Application::draw()
 	glUniform4f(uniforms["color"], 0.0f, 0.0f, 1.0f, 0.0f);
 	glDrawArrays(GL_TRIANGLES, 0, plane.getNumVertex());
 	glDisable(GL_POLYGON_OFFSET_LINE);
+
+	//Seleccionar las testuras
+	glActiveTexture(GL_TEXTURE0);
+	glBindTexture(GL_TEXTURE_2D, textures["cola"]);
+	glUniform1i(uniforms["tex1"], 0);
 }
 
 Application::~Application() 

@@ -18,6 +18,7 @@ public:
 	std::map<std::string, GLuint> geometry;
 	std::map<std::string, GLuint> programs;
 	std::map<std::string, GLuint> uniforms;
+	std::map<std::string, GLuint> textures;
 
 	glm::mat4 camera;
 	glm::mat4 modelTrans;
