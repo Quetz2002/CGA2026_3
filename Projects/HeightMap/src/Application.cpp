@@ -53,7 +53,7 @@ void Application::setup()
 {
 	//Crear Plano
 	setupShaders();
-	plane.createPlane(1);
+	plane.createPlane(10000);
 	plane.cleanMemory();
 	geometry["plane"] = plane.vao;	//Cargar shaders, compilarlos y ligarlos
 	textures["gems"] = setupTexture("Textures/Onyx.png");
