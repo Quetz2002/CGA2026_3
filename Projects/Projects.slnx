@@ -4,6 +4,7 @@
     <Platform Name="x86" />
   </Configurations>
   <Project Path="ADS/Plane.vcxproj" Id="690f19b0-f5da-47aa-933b-35afcba2d42f" />
+  <Project Path="BumpMapping/BumpMapping.vcxproj" Id="0083581c-2f3c-4cad-9f91-fbeddf2f0c93" />
   <Project Path="GouraudPhongShading/GouraudPhongShading.vcxproj" Id="e5655c0a-561e-4615-a6a4-f27283255ace" />
   <Project Path="HeightMap/HeightMap.vcxproj" Id="c29faa45-7359-4fb1-86a2-7c8ca85e8334" />
   <Project Path="HelloApplication/HelloApplication.vcxproj" Id="34308bb7-12c2-4bce-9868-9327976f25b9" />
